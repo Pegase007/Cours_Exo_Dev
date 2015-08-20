@@ -1,0 +1,52 @@
+/* HTML */
+<div id="listUtilisateur">
+</div>
+<button class="btn">Ajouter un utilisateur</button>
+
+/* JS */
+
+$(function() {
+
+    // Tableau d'utilisateur
+    var users = [
+        "Sam",
+        "Ana",
+        "Joe"
+    ];
+    
+    function supprimer() {
+        // On supprime le <li> cliqué
+        $(this).remove();
+    }
+    // Création de l'élément <ul>
+    var ul = $("<ul>"),
+        li;
+    // On parcours le tableau d'utilisateurs
+    for (var i=0 ; i < users.length ; i++) {
+        // Création d'un élément <li> à chaque tour de boucle
+        li = $("<li>");
+        // On donne un texte à l'élément <li>
+        li.text(users[i]);
+        // On ajoute l'élément <li> à <ul>
+        ul.append(li);
+    }
+    
+   // On ajoute l'élément <li> à l'élément déjà existant dans la page #listUtilisateur
+    $("#listUtilisateur").append(ul);
+
+    // Lorsqu'on clique sur le bouton    
+    $("button.btn").on("click", function() {
+        // On créé un élément <li>
+        var li = $("<li>");
+        // On assigne un texte que rentre l'utilisateur
+        li.text(window.prompt("Le nom ?"));
+         // On ajoute l'élément <li> à <ul>
+        ul.append(li);
+        
+    });
+    
+    // Lorsqu'on clique sur les <li>, on appelle la fonction "supprimer"
+    ul.on("click", "li", supprimer);
+    
+ 
+});

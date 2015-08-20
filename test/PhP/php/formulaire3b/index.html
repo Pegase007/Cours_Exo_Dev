@@ -1,0 +1,273 @@
+<html>
+<head>
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="bootstrap.css">
+
+	<link rel="stylesheet" href="slider/css/slider.css">
+
+	<link rel="stylesheet" href="select2.min.css">
+	<link href="style.css" media="screen" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+
+	<div class="container">
+
+
+
+		<form method="post" action="data.php" class="col-md-offset-3 col-md-6">
+			<h1>Location de voitures </h1>
+
+			<div class="row">
+
+				<div class="form-group col-md-4">
+					<label for="type" class="control-label">Type</label>
+					<select class="form-control" name="type" id="type">
+						<option value="type">Type</option>
+						<option value="berline">Berline</option>
+						<option value="citadine">Citadine</option>
+						<option value="break">Break</option>
+					</select>
+				</div>
+
+
+				<div class="form-group col-md-4">
+					<label for="marque" class="control-label">Marque</label>
+					<select class="form-control" name="marque" id="marque">
+						<option value="marque">Marque</option>
+						<option value="peugeot">Peugeot</option>
+						<option value="citroen">Citroen</option>
+						<option value="renault">Renault</option>
+
+					</select>
+				</div>
+
+
+				<div class="form-group col-md-4 ">
+					<label for="modeles" class="control-label">modeles</label>
+					<select class="form-control " name="modeles" id="modeles" >
+						<option value="title">Modeles</option>
+						<option value="peugeot">206</option>
+						<option value="peugeot">306</option>
+						<option value="citroen">C1</option>
+						<option value="renault">Megane</option>
+
+					</select>
+				</div> 
+			</div>
+
+			<br>
+			<!-- <div class="form-group col-md-12">
+				<label for="comnb" class="control-label col-md-3">Carburant</label>
+
+
+				<label class="checkbox-inline col-md-2">
+					<input type="checkbox" value="" id="essence">Essence
+				</label>
+				<label class="checkbox-inline col-md-2">
+					<input type="checkbox" value="" id="electrique">Electrique
+				</label>
+				<label class="checkbox-inline col-md-2">
+					<input type="checkbox" value="" id="diesel">Diesel
+				</label>
+				<label class="checkbox-inline col-md-2">
+					<input type="checkbox" value="" id="gpl">Gpl
+				</label>
+
+			</div> -->
+
+
+
+			<div class="row">
+				<div class="form-group col-md-6">
+					<label for="prix" class="control-label">Prix</label>
+					<input type="text" class=" prix" value="" data-slider-min="1000" data-slider-max="10000" data-slider-step="5" data-slider-value="[2000,5000]" name="prix" id="prix">
+				</div>
+
+
+				<div class="form-group col-md-6">
+					<label for="km" class="control-label">Km </label>
+
+					<input type="text" class="km" value="" data-slider-min="10000" data-slider-max="100000" data-slider-step="5" data-slider-value="[20000,50000]" name="km" id="km">
+				</div>
+
+			</div>
+
+
+
+			<div class="row">
+
+				<div class="form-group col-md-6">
+					<label for="anneemin" class="control-label">Annee min</label>
+					<input type="text" name="anneemin" id="anneemin" placeholder="" class="form-control">
+				</div>
+
+				<div class="form-group col-md-6 ">    
+					<label for="anneemax"  class="control-label">Annee max</label>
+					<input type="text" name="anneemax" id="anneemax" placeholder="" class="form-control">
+				</div>
+
+			</div>
+
+
+
+<!-- <div class="row">
+
+  <div class="form-group col-md-6">
+    <label for="anneemin " class="control-label">Année min</label>
+    <input type="text" name="annee min" id="anneemin" placeholder="" class="form-control">
+  </div>
+
+  <div class="form-group col-md-6 ">    
+    <label for="anneemax"  class="control-label">Année max</label>
+    <input type="text" name="anneemax" id="anneemax" placeholder="" class="form-control">
+  </div>
+
+</div> -->
+
+
+<div class="row col-md-12">
+	<div class="form-group col-md-3" id="carburants">
+		<label class="control-label">Carburant</label>
+		
+		<label class="checkbox">
+			<input type="checkbox" name="carburant[]" id="essence" value="essence">Essence
+		</label>
+
+		<label class="checkbox">
+			<input type="checkbox" name="carburant[]" id="electrique" value="electrique">Electrique
+		</label>
+
+		<label class="checkbox">
+			<input type="checkbox" name="carburant[]" id="diesel" value="diesel">Diesel
+		</label>
+
+		<label class="checkbox">
+			<input type="checkbox" name="carburant[]" id="gpl" value="gpl">Gpl
+		</label>
+
+	</div> 
+
+	<div class="form-group col-md-3">
+		<label class="control-label">Conso</label>
+
+		<label class="checkbox ">
+			<input name="conso[]" id="4L" type="checkbox" value="4L/100">4L/100
+		</label>
+		<label class="checkbox">
+			<input name="conso[]" id="5L" type="checkbox" value="5L/100">5L/100
+		</label>
+		<label class="checkbox ">
+			<input name="conso[]" id="6L" type="checkbox" value="6L/100">6L/100
+		</label>
+		<label class="checkbox ">
+			<input name="conso[]" id="7L" type="checkbox" value="7L/100">7L/100
+		</label>
+		<label class="checkbox ">
+			<input name="conso[]" id="Plus" type="checkbox" value="Plus">Plus
+		</label>
+
+	</div>
+
+	<div class="form-group col-md-3">
+		<label>Nb Portes </label>
+
+		<label class="checkbox ">
+			<input type="checkbox" name="portes[]" id="2" value="2"> 2
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" name="portes[]" id="3" value="3"> 3
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" name="portes[]" id="4" value="4"> 4
+		</label>
+		<label class="checkbox">
+			<input type="checkbox" name="portes[]" id="5" value="5"> 5
+		</label>
+
+	</div>
+
+
+	<div class="form group col-md-3">
+		<label>Rapport</label>
+		<label class="radio">
+			<input type="radio" name="rapport" id="auto" value="auto"> Auto
+		</label>
+		<label class="radio">
+			<input type="radio" name="rapport" id="manuelle" value="manuelle"> Manuelle
+		</label>
+	</div>
+
+</div>
+
+
+<div class="row">
+
+	<div class="form group">
+		<label for="couleur" class="control-label">Choisissez votre couleur</label>
+		<select class="form-control" name="couleur" id="couleur">
+			<option value="vide"></option>
+			<option value="bleu">Bleu</option>
+			<option value="rouge">Rouge</option>
+			<option value="blanc">Blanc</option>
+			<option value="autres">Autres</option>
+		</select>
+	</div>
+	<div class="form group">
+		<label for="couleurhexa" class="control-label">Entrez une couleur hexadecimale</label>
+		<input type="text" name="couleurhexa" id="couleurhexa" placeholder="" class="form-control">
+	</div>
+	
+
+</div>
+<br>
+<div class="row">
+
+	<div class="form group ">
+		<label for="type" class="control-label">Comment vous avez trouvé ce formulaire?</label>
+		<select name="trouve[]" class="js-example-basic-multiple col-md-12"  id="trouve" multiple="multiple">
+			<option  value="google">Google</option>
+			<option  value="yahoo">Yahoo</option>
+			<option  value="autre">Autres moteurs de recherche</option>
+			<option  value="conseil">Connaissance</option>
+			<option  value="pub">Publicité</option>
+
+
+
+		</select>
+
+
+
+	</div>
+
+
+</div>
+<br>
+
+<div class="row">
+
+	<button type="submit" class="btn-default btn-lg btn-block" id="enregistrer"> Enregistrer </button>
+
+</div>
+
+
+</form>
+
+</div>
+
+<!-- Pixel Admin's javascripts
+--><!-- <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+<script src="jquery-2.1.4.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script rel="stylesheet" href="bootstrap.min.js"></script>
+<script src="slider/js/bootstrap-slider.js"></script>
+<script type="text/javascript" src="select2.min.js"></script>
+<script type="text/javascript" src="validate.js"></script>
+<script src="jqueryexo.js"></script>
+
+
+</body>
+</html>

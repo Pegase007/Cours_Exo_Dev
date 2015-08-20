@@ -1,0 +1,169 @@
+/*
+
+    site-primary-nav
+
+***************************************/
+
+.primary-nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
+.primary-nav a{
+    height: 3em;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 0 2.7%;
+    position: relative;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.primary-nav a::before{
+    content: "■";
+    display: block;
+    text-align: center;
+    transition: all 1s;
+    font-size: .75em;
+    padding-bottom: 12px;
+
+}
+
+/*
+
+    site-column-a
+
+***************************************/
+
+.column-title{
+    border-width: 0 0 2px 0;
+    border-style: dotted;
+    padding: 0 0 0.5em 0;
+}
+
+.list-news{
+    padding: 0 0 0 17%;
+}
+
+.news{
+    margin: 0 0 0.5em 0;
+    position: relative;
+}
+
+.news a{
+    display: block;
+}
+
+.news::before{
+    content: "■";
+    position: absolute;
+    left: -15%;
+    font-size: 8px;
+}
+
+.news-date{
+    text-decoration: none;
+}
+
+/*
+
+    site-column-b
+
+***************************************/
+
+.inner-column{
+    /* Attention, non supporté par IE 9 et moins */
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    -o-columns: 2;
+    -ms-columns: 2;
+    columns: 2;
+    -moz-column-gap: 2.5em;
+    -webkit-column-gap: 2.5em;
+    -o-column-gap: 2.5em;
+    -ms-column-gap: 2.5em;
+    column-gap: 2.5em;
+    padding: 1.7em 0 0 0;
+}
+
+.recipe{
+    overflow: hidden;
+    margin: 0 0 2em 0;
+}
+
+.recipe-image{
+    float: left;
+    margin: 0 10% 0 0;
+    max-width: 100%;
+    width: auto;
+}
+
+.recipe-caption{
+    margin: 1em 0 0 0;
+    width: 45%;
+    float: left;
+}
+
+.recipe-description{
+    font-size:0.9em;
+}
+
+/*
+
+    site-footer
+
+***************************************/
+.footer {
+    padding: 1em 0;
+}
+
+.footer p{
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+
+/*
+
+   TAABLEAU DE MENU
+
+***************************************/
+
+table{
+    width : 100%;
+    height: auto;
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    font-size: 1.1em;
+    /*padding: 0 2.7%;*/
+    /*position: relative;*/
+    text-decoration: none;
+    line-height: 2;
+    /*white-space: nowrap;*/
+    border: 1px solid black;
+
+}
+
+
+td{
+    padding-left: 5px;
+    border: 1px solid black;
+}
+
+/* Cible les colonnes font et text */
+td[rowspan]{
+    text-align: right;
+    background-color: rgb(158, 155, 136);
+}
+
+/* Cible la première ligne du tableau */
+thead td{
+    font-weight: bold;
+    background-color: rgb(158, 155, 136);
+}
+

@@ -1,0 +1,11 @@
+new:
+ path: /edit/{id}
+ defaults: {_controller:AppBundle:Default:edit,id:1}
+
+exo:
+ path: /views/{id}
+ defaults: {_controller:AppBundle:Default:views,id:1}
+
+home:
+ path: /{id}
+ defaults: {_controller:AppBundle:Default:index,id:1}

@@ -1,0 +1,288 @@
+html{
+	background: url("../img/movie-noPlay-blank.png"),url("../img/movie-noPlay-blank.png") right;
+	background-repeat: repeat-y;
+	background-color: rgba(187, 125, 52,0.4);
+}
+body{
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(187, 125, 52,0.6);
+	text-decoration: none;
+	background-image: url("http://www.cabowabocantina.com/wp-content/uploads/2013/04/hollywood-front.jpg");
+	background-repeat: no-repeat;
+	background-position: center 14em;
+}
+img{
+	margin-left: 3px;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+.row{
+	max-width: 1000px;
+}
+/****************************HAUT DE PAGE*********************/
+header{
+	height: 100px;
+	background-color: rgba(139, 69, 19,0.6);
+	padding-top: 1em;
+}
+
+h1{
+	background-color: rgba(0,0,0, 0.8);
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+#first_nav{
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(139, 69, 19,0.4);
+	color: white;
+	text-align: center;
+	margin-bottom: 22em;
+}
+#first_nav >ul>li{
+	display: inline-block;
+	padding: 1em;
+	font-size: 130%;
+	background-color: rgba(255,0,0, 0.3);
+	border-radius: 10px;
+	border: 1px solid white;
+	margin-right: 2em;
+
+}
+/*******************************TOUS LES ARTICLES****************/
+/*section{
+	margin-top: 22em;
+}*/
+#film_attente{
+	float: left;
+	margin-right: 1em;
+	border: 1px solid white;
+	width: 48.6%;
+	text-align: center;
+	border-radius: 10px;
+}
+#film_affiche{
+	display: inline-block;
+	border: 1px solid white;
+	width: 50%;
+	text-align: center;
+	border-radius: 10px;
+	
+}
+#best_actors{
+	width: 100%;
+	border: 1px solid white;
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border-radius: 10px;
+	margin-right: 1em;
+	border-right: 1px solid white;
+}
+#best_actors img{
+	max-height: 400px;
+	width: 100%;
+}
+#categories{
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+#real{
+	border: 1px solid white;
+	border-radius: 10px;
+	padding-left: 5px;
+	margin-top: 2em;
+}
+#real img{
+	max-height: 300px;
+	margin-top: 20px;
+}
+#real p{
+	margin: 0;
+}
+h3{
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	background-color: white;
+	max-width: 320px;
+	font-size: 200%;
+	color: black;
+	border-radius: 20px;
+	text-align: center;
+}
+#carousel-example-generic > div{
+	height: 550px;
+}
+.carousel-inner>.item>img{
+	margin: 0 auto;
+}
+#random_stats_cine {
+	margin-top: 2em;
+}
+#random_stats_cine > div{
+	padding: 0;
+	border : 1px solid white;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 10px;
+	text-align: center;
+
+}
+#not_last_parts >.col-md-3 {
+
+	border : 1px solid white;
+	border-radius: 10px;
+	padding: 0;
+	text-align: center;
+	margin: auto 0;
+}
+.carousel{
+	height: 350px;
+	border : 1px solid white;
+	border-radius: 10px;
+}
+#last_parts{
+	margin-top: 2em;
+}
+.comments_border {
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+
+}
+#coeur{
+	background-color: red;
+	padding: 0.5em;
+}
+#alluser{
+	text-align: center;
+	font-weight: bold;
+}
+
+.owl-item{
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.owl-item  img{
+	height: 250px;
+	width: 200px;
+}
+#actif > p {
+/*	display: inline;*/
+}
+/*****************************BAS DE PAGE***********************/
+footer{
+	height: 100px;
+	background-color: rgba(139, 69, 19,0.6);
+}
+
+/***********************MODIF SUR categories.php**************/
+#page_categories{
+	margin-top: 22em;
+}
+#page_categories img{
+	height: 220px;
+	max-width: 400px;
+	margin: 0 auto;
+}
+#page_categories .categ{
+	border: 1px dotted white;
+}
+#page_categories h2{
+	font-weight: bold;
+	background-color: white;
+}
+#page_categories a{
+	color: black;
+}
+/***********************MODIF SUR categorie.php******************/
+#categorie .row{
+	border-bottom: 1px solid white;
+}
+#categorie h2{
+	font-weight: bold;
+	text-align: center;
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+}
+/*#categorie h3{
+	background-color: white;
+	max-width: 320px;
+	font-size: 200%;
+	color: black;
+}*/
+#categorie >p{
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+}
+/*********************MODIF SUR movie.php*********************/
+
+.commentaire{
+	margin-top: 1em;
+	border-right: 1px dashed white;
+	border-bottom: 1px dashed white;
+	height: 140px;
+}
+.row{
+	margin: 0;
+}
+#movie h2{
+	font-weight: bold;
+	text-align: center;
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+}
+#actors .actor{
+	height: 570px;	
+	/*clear: both;*/
+	overflow: scroll;
+}
+#actors .row{
+	margin-top: 2em;
+}
+#cinemas .cinema{
+	margin-top: 2em;
+	border-right: 1px dashed white;
+	border-bottom: 1px dashed white;
+	height: 140px;
+}
+.biography{
+	max-height: 500px;
+	overflow: hidden;
+	clear: both;
+
+}
+/*****************************MODIF SUR actors.php****************/
+#films_joues img{
+	max-height: 410px;
+}
+#acteurs_ville img{
+	max-height: 410px;
+}
+#acteurs_ville{
+	text-align: center;
+}
+/*****************************MODIF SUR directors.php***********/
+#directors img{
+	max-height: 410px;
+	vertical-align: middle;
+}
+#directors{
+	text-align: center;
+}
+#directors_ville{
+	text-align: center;
+}
+#directors_ville img{
+	margin-left: 3em;
+}

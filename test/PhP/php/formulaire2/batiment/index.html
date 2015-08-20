@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta viewport content="width=device-width">
+    <title>Form</title>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css" />
+
+
+</head>
+<body>
+    <div  class="container col-md-offset-3 col-md-6">
+        <form method="post" action="data.php">
+            <div class="page-header">
+                <h1 class="text-center">Javascript</h1>      
+                <p class="text-center">Formulaire de construction</p>
+            </div>
+
+            <div class="form-group">
+
+                <label for="nature" class="control-label">Nature</label>
+                
+                <select class="form-control" name="nature" id="nature">
+                    <option>Selectionner</option>
+                    <option>Individuel</option>
+                    <option>Particulier</option>
+                    <option>Hopitalier</option>
+                    <option>Autre</option>
+
+                </select>
+
+            </div>
+
+            <div class="row">
+
+                <div class="form-group col-md-2">
+                    <label  class="control-label">Type</label>
+                </div>
+
+                <div class="form-group  radio-inline ">    
+
+                    <label class="radio ">
+                        <input type="radio" name="type"  id="tradition" value="tradition" />
+                        Tradition
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="type" id="brique" value="brique" />
+                        Brique
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="type" id="bioclimatique" value="bioclimatique" />
+                        Bioclimatique
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="checkbox[]" id="ecologique" value="ecologique" />
+                        Ecologique
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="form-group col-md-6">
+                    <label for="tva" class="control-label">TVA intercom</label>
+                    <input type="text" name="tva" id="tva" placeholder="" class="form-control">
+                </div>
+
+                <div class="form-group col-md-6 ">    
+                    <label for="siret"  class="control-label">Siret</label>
+                    <input type="text" name="siret" id="siret" placeholder="" class="form-control">
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="form-group col-md-6">
+                    <label for="nom" class="control-label">Nom</label>
+                    <input type="text" name="nom" id="nom" placeholder="" class="form-control">
+                </div>
+
+                <div class="form-group col-md-6 ">    
+                    <label for="rs"  class="control-label">Raison Sociale</label>
+                    <select class="form-control" id="rs" name="rs" >
+                        <option value="selectionner">Selectionner</option>
+                        <option value="sas">SAS</optionvalue>
+                        <option value="scs">SCS</option>
+                        <option value="sa">SA</option>
+                        <option value="sarl">SARL</option>
+                        <option value="snc">SNC</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="form-group col-md-6">
+                    <label for="ape" class="control-label">Code APE</label>
+                    <input type="text" name="ape" id="ape" placeholder="" class="form-control">
+                </div>
+
+                <div class="form-group col-md-6 ">    
+                    <label for="rcs"  class="control-label">Numero RCS</label>
+                    <input type="text" name="rcs" id="rcs" placeholder="" class="form-control">
+                </div>
+
+            </div>
+            <div class="form-group "> 
+                <label for="projet" class="control-label">Nom du projet</label>
+                <input type="text" name="projet" id="projet" placeholder="" class="form-control">
+            </div>
+            
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <div class="row">
+                        <label class="control-label col-md-4" >Description</label>
+                        <p id="counterdesc">
+                            <span>0</span> 
+                            char
+                        </p>
+                        <button class="btn btn-default btn-xs hidden" id="modifydesc" type="button">Modify</button>
+                    </div>
+                    <textarea name="description" id="description"  class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <div class="row">
+                        <label class="control-label col-md-3" >Resume</label>
+                        <p id="counterres">
+                            <span>0</span> 
+                            char
+                        </p>
+                        <button class="btn btn-default btn-xs hidden" id="modifyres" type="button">Modify</button>
+                    </div>
+                    <textarea name="resume" id="resume"  class="form-control" rows="5"></textarea>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="budgetmin" class="control-label">Budget Min</label>
+                    <input type="text" name="budgetmin" id="budgetmin" placeholder="" class="form-control" >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="budgetmax" class="control-label">Budget Max</label>
+                    <input type="text" name="budgetmax" id="budgetmax" placeholder="" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="superficiemin" class="control-label">Superficie Min</label>
+                    <input type="text" name="superficiemin" id="superficiemin" placeholder="En Euros"  class="form-control"> 
+                </div>
+
+                <div class="form-group col-md-6">    
+                    <label for="superficiemax" class="control-label">Superficie Max</label>
+                    <input type="text" name="superficiemax" id="superficiemax" placeholder="%" class="form-control"> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6"> 
+                    <label for="url" class="control-label">Url du plan</label>
+                    <input type="text" name="url" id="url" placeholder="" class="form-control">
+                </div>
+
+
+                <div class="form-group col-md-6">
+                    <label for="etages" class="control-label">Nb Etages</label>
+                    <input type="text" name="etages" id="etages" placeholder="xxx" class="form-control">
+
+                </div>
+            </div>
+                <div class="row">
+                
+                <div class="form-group  col-md-6">
+                    <label class="control-label ">Autre</label>
+
+                    <div class="form-group ">
+                        <label class="checkbox-inline" class="control-label">
+                          <input type="checkbox" id="clim"  name="autres[]" value="climatise"> Climatisé
+                      </label>
+                      <label class="checkbox-inline">
+                          <input type="checkbox" id="chauffe" name="autres[]" value="chauffe"> Chauffé
+                      </label>
+
+                  </div>
+              </div>
+          
+
+
+          <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
+                <label  class="control-label" >Financement</label>
+
+                <div class="form-group">
+                    <label class="radio-inline">
+                      <input type="radio" name="financement" id="bbc" value="bbc"> BBC
+                  </label>
+                  <label class="radio-inline">
+                      <input type="radio" name="financement" id="duflot" value="duflot"> Duflot
+                  </label>
+                  <label class="radio-inline">
+                      <input type="radio" name="financement" id="btz" value="btz"> BTZ
+                  </label>
+              </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="form-group ">
+
+                    <div>
+                        <label class="checkbox-inline ">
+                            <input type="checkbox" id="conditions" name="conditions" value="accepte"> J'accepte les conditions d'utilisation.
+                        </label>
+                    </div>
+
+                </div>
+      
+
+      <button type="submit" class="btn-default btn-lg btn-block" id="enregistrer"> Enregistrer </button>
+
+  </div>
+  <br>
+  <br>
+
+</form>
+<!-- <input type="button" value="Enregistrer"> -->      
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="jqueryexo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+html{
+    font-size: 62.5%;
+}
+#movies{
+
+
+}
+
+.caption {
+    max-height: 336px;
+    overflow: hidden;
+}
+.captionb{
+
+    max-height: none;
+}
+.page-header{
+    margin-top: 10rem;
+    text-align: center;
+
+}
+.thumbnail img{
+    max-height: 250px;
+}
+.blue{
+    background-color: aqua;
+    color: white;
+}
+img.img-circle{
+
+    max-height:150px;
+}
+

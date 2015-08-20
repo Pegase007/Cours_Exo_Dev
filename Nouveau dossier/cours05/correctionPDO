@@ -1,0 +1,35 @@
+ajax.php
+
+<?php
+	header("Content-Type: application/json");
+	$pdo = new PDO("mysql:host=localhost;dbname=test", "root", "troiswa");
+	
+	$req = $pdo->prepare("SELECT * FROM messages");
+	$req->execute();
+
+	$donnees = $req->fetchAll(PDO::FETCH_ASSOC);
+	echo json_encode($donnees);
+
+?>
+
+main.js
+
+$(function() {
+var ul = $("<ul>");
+$("body").append(ul);
+
+	$.ajax({
+	url: "ajax.php",
+	method: "GET",
+	success: function(ret) {
+		var li;
+		for (var i=0 ; i < ret.length ; i++) {
+			li = $("<li>");
+			li.text(ret[i].contenu);
+			ul.append(li);
+		}
+	}
+
+	});
+
+});

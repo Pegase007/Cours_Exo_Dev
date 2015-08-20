@@ -1,0 +1,39 @@
+.description + p{
+	height: 400px;
+	overflow: scroll;
+}
+h2{
+	margin-bottom: 2em;
+	text-align: center;
+}
+.panel-primary{
+	background-color: #1AAADA;
+	color: white;
+	font-weight: bold;
+}
+.panel-info{
+	background-color: #D9EDF7;
+	color: black;
+}
+.panel-success.panel-dark .panel-heading {
+	background-color: #1AAADA;
+}
+#content-wrapper > div:nth-child(21) > div > div > div.panel-heading > img{
+	width: 250px;
+	height: 450px;
+}
+#content-wrapper > div:nth-child(20) > div:nth-child(1) > div > div.panel-heading{
+	background-color: #D9EDF7;
+}
+#content-wrapper > div:nth-child(20) > div:nth-child(1) > div > div.panel-body{
+	background-color: #D9EDF7;
+}
+#content-wrapper > div:nth-child(22) > div > div > div > div:nth-child(3) > a > p{
+	margin: 0;
+}
+#content-wrapper > div:nth-child(20) > div:nth-child(1) > div > div.panel-heading > div > span{
+	color: black;
+}
+#content-wrapper > div:nth-child(20) > div:nth-child(1) > div > div.panel-body > div > p:nth-child(2){
+	color: black;
+}

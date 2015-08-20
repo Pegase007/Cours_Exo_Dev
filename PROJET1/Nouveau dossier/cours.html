@@ -1,0 +1,8 @@
+SELECT  GROUP_CONCAT(DISTINCT(table2.title)), GROUP_CONCAT(DISTINCT(table3.title))
+FROM movies
+
+INNER JOIN movies AS table2
+ON  table2.languages='fr'
+
+INNER JOIN movies AS table3
+ON table3.languages='en'

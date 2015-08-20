@@ -1,0 +1,103 @@
+/*
+
+    base
+
+***************************************/
+
+.container{
+    width: 775px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*
+
+    block
+
+***************************************/
+
+.site-primary-nav{
+    margin: 2.75em 0 0 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 45%;
+}
+
+.site-header{
+    position: relative;
+    overflow: hidden;
+}
+.site-presentation {
+    margin: 8em 0 7.75em 50%;
+}
+
+.site-column-a{
+    width: 28%;
+    margin: 0 0 1em 2.6666666%;
+    padding: 0 4% 1em 0;
+    border-width: 0 2px 0 0;
+    border-style: dotted;
+    float: left;
+}
+
+.site-column-b{
+    width: 62%;
+    margin: 0 0 1em 4.1290322%;
+    float: left;
+}
+
+/*
+ FORMULAIRE
+
+***************************************/
+.form{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+form h2{
+   margin-top: 30px; 
+}
+
+label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+
+input, textarea {
+  width: 200px;
+}
+
+
+ /*<label for="livraison">Mode de livraison</label>*/
+
+
+
+input[type=checkbox] {
+    width: 10px;
+    position: relative;
+    padding:5px;
+    margin: 10px;
+}
+
+input[type=checkbox] >label{
+    color:red;
+}
+
+input[type=radio]{
+    position: relative;
+    padding:5px;
+    margin: 10px;
+
+}
+
+
+input[type=submit] {
+    margin-top: 30px;
+    width: 120px;
+    padding: 10px;
+    margin-left: 40px;
+}

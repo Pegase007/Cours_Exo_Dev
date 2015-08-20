@@ -1,0 +1,44 @@
+/* Updated on august 2014: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    font-size: 0.75em;
+    font-family: 'cantarell', 'Open Sans', 'Helvetica Neue', 'Verdana', sans-serif;
+    /* Optimisation des polices pour la lecture (et non les performances) */
+    text-rendering: optimizeLegibility; /* On peut choisir entre optimiser le temps de chargement ou le rendu graphiq. Ici on a choisi le rendering */
+    
+    /* Règlages propres au moteur Webkit */
+    /* Empêche le navigateur de redimensionner les 
+     * petites polices */
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    /* Règlages propres à Firefox Mac Os X (aliasing) */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0 0 0.5em 0;
+}
+
+h1{
+    font-size: 3.5em;
+    line-height: 1;
+}
+
+h2{
+    font-size: 2.1em;
+}
+
+h3{
+    font-size: 0.9em;
+}
+
+p{
+    line-height: 1.4em;
+}

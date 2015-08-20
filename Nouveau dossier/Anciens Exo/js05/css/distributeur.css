@@ -1,0 +1,56 @@
+body{
+	text-align: center;
+	text-transform: uppercase;
+	background: url("../img/billets.png") no-repeat left top,  
+				url("../img/billets.png") no-repeat right top;
+				background-color: lightgray;
+}
+h1{
+	background-color: white;
+	color: black;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+
+}
+.bouton{
+	border: 2px solid #009900;
+	background-color: #33cc33;
+	padding: 5px;
+	width: 20%;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	border-radius: 25px;
+
+}
+input {
+	text-align: center;
+
+}
+img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+h2{
+	background-color: black;
+	color: white;
+	width: 20%;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+}
+.bouton:hover{
+
+	color: #33cc33;
+	background-color: black;
+}

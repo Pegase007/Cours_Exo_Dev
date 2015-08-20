@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+ID:{{id}}
+<a href='{{url}}'>{{id+1}}</a>
+{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/main.css')}}">
+{% endblock %}

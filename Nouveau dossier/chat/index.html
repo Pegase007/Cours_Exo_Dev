@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html ng-app="monApp">
+
+<meta charset="utf-8"/>
+<title>test nodejs</title>
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+
+<head>
+
+</head>
+
+<body>
+
+
+<div ng-controller="chatCtrl">
+
+<ul>
+	<li ng-repeat="m in messages">{{m.msg}}</li>
+
+</ul>
+
+<input ng-model="texte" type="text">
+<button ng-click="envoyer()">envoyer</button>
+
+
+</div>
+
+
+<script src="chat.js"></script>
+</body>
+
+
+
+</html>

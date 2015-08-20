@@ -1,0 +1,36 @@
+input[name="pseudo"], input[name="email"] {
+	display: block;
+	margin: 0 0 1em 2em;
+}
+
+
+textarea[name="message"] {
+	display: block;
+	margin: 0 0 1em 2em;
+	height: 8em;
+}
+
+
+.msg-container {
+	min-height: 20px;
+	max-height: 300px;
+	overflow: auto;
+	height: auto;
+	width: 40%;
+	border: 1px solid black;
+	
+	margin-bottom: 2em;
+}
+
+
+
+
+
+
+
+
+.clear {
+	height: 0px;
+	visibility: hidden;
+	clear: both;
+}

@@ -1,0 +1,58 @@
+<?php
+$connexion = new PDO("mysql:host=localhost;dbname=cinema","root","troiswa");
+
+$films = $connexion -> query(
+	"SELECT title
+	FROM movies
+	WHERE visible = 1
+	AND cover = 1
+	AND date_release <=NOW()"
+	);
+?>
+<!doctype HTML>
+<html>
+<head>
+	<meta charset='utf-8'>	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/jquery-2.1.3.min.js">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="application.css">
+</head>
+<body>
+	<header>
+
+	</header>
+		<nav id='first_nav'>
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Films</a></li>
+				<li><a href="#">Categories</a></li>
+				<li><a href="#">Acteurs</a></li>
+				<li><a href="#">Réalisateurs</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article id='film_affiche'>
+				<h1>Films à l'affiche</h1>
+			</article>
+
+			<article id='film_attente'>
+				<h1>Films les plus attendus</h1>
+			</article>
+		</section>
+
+
+		<article id='best_actors' col-md>
+			<h1>Les 3 meilleurs acteurs</h1>
+		</article>
+
+		<footer>
+
+		</footer>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
