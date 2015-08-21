@@ -2,28 +2,19 @@
 
 namespace App;
 
-use \App\Product;
-use \App\Title;
-use \App\Visible;
-
-class Declinaison extends Product implements Title{
-
+class Declinaison extends Product implements Title
+{
     protected $poid;
     protected $hauteur;
     protected $profondeur;
     protected $compteurImage;
     protected $images;
 
-
-
-    public function __construct(){
-
-        $this->compteurImage=0;
-        $this->images=array();
+    public function __construct()
+    {
+        $this->compteurImage = 0;
+        $this->images = array();
     }
-
-
-
 
     /**
      * @return mixed
@@ -41,8 +32,6 @@ class Declinaison extends Product implements Title{
         $this->images = $images;
     }
 
-
-
     /**
      * @return mixed
      */
@@ -58,7 +47,6 @@ class Declinaison extends Product implements Title{
     {
         $this->compteurImage = $compteurImage;
     }
-
 
     /**
      * @return mixed
@@ -110,39 +98,28 @@ class Declinaison extends Product implements Title{
 
     public function dimension()
     {
-        return "Poids : ".$this->getPoid()." Haut. : ".$this->getHauteur()." Prof. : ".$this->getProfondeur();
+        return 'Poids : '.$this->getPoid().' Haut. : '.$this->getHauteur().' Prof. : '.$this->getProfondeur();
     }
 
-
-
     /**
-     *Methodes à implementer
+     *Methodes à implementer.
      */
     public function getParent(Visible $elt)
     {
-        return "La catégorie parente est : ".$elt->getTitle();
+        return 'La catégorie parente est : '.$elt->getTitle();
     }
 
-
-
-
-
-
-    public function addImage($item) {
+    public function addImage($item)
+    {
         array_push($this->images, $item);
-       return $this->compteurImage ++;
+
+        return $this->compteurImage++;
     }
 
     public function deleteImage($item)
     {
         unset($this->product[$item->getUrl()]);
 
-         $compteurImage --;
+        --$compteurImage;
     }
-
-
-
 }
-
-
-?>

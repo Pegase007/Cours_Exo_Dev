@@ -2,20 +2,9 @@
 
 namespace App;
 
-interface Visible{
-
-
+interface Visible
+{
     public function getVisible();
 
     public function setVisible($visible);
-
-
-
-
 }
-
-
-
-
-
-?>

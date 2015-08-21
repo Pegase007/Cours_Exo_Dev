@@ -1,20 +1,17 @@
 <?php
 
+namespace Lib;
 
-namespace App;
-
-use \Lib\Beautiful ;
-
-
-class Images {
-
+class Images
+{
     protected $url;
     protected $extension;
     protected $produit;
 
 //-----------------------------------------------------------
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->beautiful = new Beautiful();
     }
 
@@ -65,13 +62,4 @@ class Images {
     {
         $this->produit = $produit;
     }
-
-
-
-
 }
-
-
-
-
-?>

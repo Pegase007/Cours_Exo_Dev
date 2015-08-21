@@ -2,8 +2,7 @@
 
 namespace App;
 
-
-use \Lib\Beautiful;
+use Lib\Beautiful;
 
 
 //permet d'inscrire une class dans une classe
@@ -17,24 +16,22 @@ use \Lib\Beautiful;
 //    }
 
 
+class Category
+{
+    use \App\Position;
 
-
-class Category {
 
     protected $title;
     protected $description;
     protected $visible;
-    protected $products=array();
+    protected $products = array();
 
-    public function __construct($etat){
-
-        $this->visible=$etat;
-        $this->products=array();
-        $this->beautiful= new Beautiful(); //00: agrégation
-
-
+    public function __construct()
+    {
+//        $this->visible = $etat;
+        $this->products = array();
+        $this->beautiful = new Beautiful(); //00: agrégation
     }
-
 
     /**
      * @return mixed
@@ -89,7 +86,6 @@ class Category {
      */
     public function getProducts()
     {
-
         return $this->products;
     }
 
@@ -101,10 +97,6 @@ class Category {
         $this->products = $products;
     }
 
-
-
-
-
 //Injection de dependance
 //    public function __construct($visible= 1, $products = array()){
 //        $this->visibility = $visible;
@@ -114,18 +106,17 @@ class Category {
 //    } >>> $categorie1 =  new Category(1, array($produit1,$produit2));
 
 
-
-
-
 //ajouter retirer produit
     public function ajoutProduit(Product $product)
     {
-      $this->products[$product-> getTitle() ]=$product;
+        $this->products[$product->getTitle() ] = $product;
     }
 
     /**
-     * Méthode pour ajouter des produits dans la catégorie
+     * Méthode pour ajouter des produits dans la catégorie.
+     *
      * @param Product $product
+     *
      * @return $this
      */
 //    public function addProduct (Product $product)
@@ -135,13 +126,12 @@ class Category {
 //    }
 
 
-
     public function removeProduit(Product $product)
     {
         unset($this->products[$product->getTitle()]);
     }
 
-    /**
+    /*
      * Méthode pour supprimer des produits dans la catégorie
      * @param $product
      * @return $this
@@ -165,11 +155,4 @@ class Category {
 //
 //    }
 //
-
-
 }
-
-
-
-
-?>

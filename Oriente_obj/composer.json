@@ -1,0 +1,9 @@
+{
+//  cree une mise a jour automatique et charger toutes les classes via autoload
+  "autoload":{
+    "psr-4":{"":"src/"}
+
+  }
+
+
+}

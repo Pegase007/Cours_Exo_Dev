@@ -9,20 +9,21 @@
 <body>
 <div class="container">
 <?php
-include'src/App/Visible.php';
-include"src/App/Title.php";
-include"src/App/Catalogue.php";
-include "src/App/Product.php";
-include"src/App/Users.php";
-include"src/App/Category.php";
-include"src/App/Commande.php";
-include"src/Lib/Beautiful.php";
-include"src/Lib/Images.php";
-include"src/App/Database.php";
-include"src/App/Declinaison.php";
-include"src/App/Administrateur.php";
-include"src/Lib/Bootstrap.php";
-include"src/App/DatabaseAdvance.php";
+//include'src/App/Visible.php';
+//include"src/App/Title.php";
+//include"src/App/Catalogue.php";
+//include "src/App/Product.php";
+//include"src/App/Users.php";
+//include"src/App/Category.php";
+//include"src/App/Commande.php";
+//include"src/Lib/Beautiful.php";
+//include"src/Lib/Images.php";
+//include"src/App/Database.php";
+//include"src/App/Declinaison.php";
+//include"src/App/Administrateur.php";
+//include"src/Lib/Bootstrap.php";
+//include"src/App/DatabaseAdvance.php";
+require __DIR__ . '/vendor/autoload.php';
 
 /**
  * création d'un objet Product (instance de la classe Product)
@@ -161,7 +162,7 @@ $product2->setImages(array("https://www.organicfacts.net/wp-content/uploads/2013
 $product3 = new \App\Product();
 
 
-$user1 = new \App\User();
+$user1 = new \App\Users();
 
 $user1->setNom("Harold");
 $user1->setPrenom("FINCH");
@@ -179,7 +180,7 @@ $user1->augmenterAge();
 echo $user1->majeur();
 
 
-$user2 = new \App\User();
+$user2 = new \App\Users();
 
 $user2->setNom("Don");
 $user2->setPrenom("DRAPER");
@@ -194,7 +195,7 @@ echo $user2->ecrire($user1);
 echo $user2->majeur();
 //var_dump($user2);
 
-$user3 = new \App\User();
+$user3 = new \App\Users();
 
 $user3->setNom("Walter");
 $user3->setPrenom("WHITE");
@@ -276,11 +277,11 @@ echo $lib->tab($commande->getProduits());
 
 
 //constantes
-echo \App\User::PAYS. "<br />";
-echo \App\User::FORMATION. "<br />";
+echo \App\Users::PAYS. "<br />";
+echo \App\Users::FORMATION. "<br />";
 //methodes statiques
-echo \App\User::getPays(). "<br />";
-echo \App\User::getFormation(). "<br />";
+echo \App\Users::getPays(). "<br />";
+echo \App\Users::getFormation(). "<br />";
 
 
 
@@ -397,7 +398,7 @@ echo "<br>".$declinaison1->dimension()."<br>";
 
 
 
-$images=new\App\Images();
+$images=new\Lib\Images();
 //$declinaison1->addImage($image1);
 var_dump($declinaison1);
 
@@ -435,7 +436,7 @@ echo "<br>".$admin2-> inscriptionNws($user1);
 
 echo "<h2> Inherited class from database </h2>";
 
-$advanced= new \App\DatabaseAdvance();
+$advanced = new \App\DatabaseAdvance();
 
 echo "<h3>Get movies</h3>";
 foreach($advanced->getMovies() as $movies){
@@ -487,7 +488,7 @@ foreach( $advanced->getMovCat("Fantastique") as $cat) {
 
 }
 
-echo "<h3>Get Movies released befor date</h3>";
+echo "<h3>Get Movies released beforE date</h3>";
 
 foreach( $advanced->getMovBefore('2015-01-02') as $act) {
 
@@ -498,12 +499,15 @@ foreach( $advanced->getMovBefore('2015-01-02') as $act) {
 //var_dump($advanced->getTable());
 /** INSERT INTO TABLE */
 
+
 //$advanced->inserer($advanced->getTable(),'user');
 
-
+/**
+ * Modifier donnée dans la base de donnée
+ */
 $advanced->modifier('user','28','avatar','Bob');
 
-
+$advanced->delete('user','','','bananabizzzz');
 
 
 
@@ -552,8 +556,27 @@ echo $decliInt->getParent($productInt);
 echo $decliInt->getParent($decliInt2);
 
 
+/**
+ * Traits
+ */
+
+echo"<h2>Traits</h2>";
+$produit = new\App\Category();
+$produit->setPosition(2);
+echo $produit->getPosition();
 
 
+/**
+ * ACTEURS/REALISATEURS
+ */
+
+echo "<h2> ACTORS/DIRECTORS</h2>";
+
+$actor1 = new \App\Actors();
+//$actor1->getCreate($actor1->getTestarray(), "actors");
+//$actor1->getUpdate($actor1->getTestarray2(),"actors",39);
+//$actor1->getDelete("actors",'35');
+echo $actor1->getRetrieve("actors","firstname","Martin");
 ?>
 </div>
 </body>

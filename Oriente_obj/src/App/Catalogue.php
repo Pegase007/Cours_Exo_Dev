@@ -1,34 +1,21 @@
 <?php
 
-
 namespace App;
 
-abstract class Catalogue{
-
+abstract class Catalogue
+{
     protected $name;
     protected $marque;
     protected $ndd;
 
-    public function getName(){
-
+    public function getName()
+    {
         return $this->name;
-
     }
 
-/**
- * Abstract method
- * Une methode abstraite est une methode qui doit etre redéfinie par les classes filles
- *
- */
-
-    public abstract function __toString();
-
-
-
-
+    /**
+     * Abstract method
+     * Une methode abstraite est une methode qui doit etre redéfinie par les classes filles.
+     */
+    abstract public function __toString();
 }
-
-
-
-
-?>
