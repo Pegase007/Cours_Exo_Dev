@@ -1,0 +1,13 @@
+nav li a{
+   
+    background-color: #72AA60;
+  
+}
+.select{
+    background-color: #F9BC02;
+}
+nav a:hover{
+    background-color:#F9BC02; 
+}
+footer a:hover{
+    color: blue;

@@ -1,0 +1,158 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers/ fonction qui sert aux vieux navigateurs */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+/* virer les petit cercles*/
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body{
+    font-size: 100%;
+    line-height: 1.5;
+    background-size: 100% 1.5em;
+    /*background-image: -webkit-linear-gradient(#eee .05em, transparent 1px);
+    background-image: -moz-linear-gradient(#eee .05em, transparent 1px);*/
+    background-image: linear-gradient(#eee 1px, transparent 1px);
+   
+/*        background-size: 100% 1.5em;
+    background-image: -webkit-linear-gradient(#eee .05em, transparent 1px);
+    background-image: -moz-linear-gradient(#eee .05em, transparent 1px);
+    background-image: linear-gradient(#eee .05em, transparent 1px);*/
+    width: 540px;
+    margin: 0 auto;
+    font-family: 'Cardo', 'Times New Roman', 'FreeSerif', serif;
+    color: rgb(51,51,51);
+}
+header h1{
+    font-family: Special Elite;
+    font-size: 500%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 60px;
+    letter-spacing: 15px;
+
+}
+header .citation{
+       width: 370px;
+       float: left;
+       font-style: italic;
+      line-height: 170%;
+      padding-top: 25px;
+      font-size: 115%;
+
+}
+header .author{
+    width:170px;
+    float: left;
+    text-transform: uppercase;
+    font-size: 65%;
+    padding-top: 65px;
+    font-weight: lighter;
+
+}
+.clear{
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+header .text{
+    width: 540px;
+    margin-top: 35px;
+    text-align: justify;
+    line-height: 150%;
+    font-size: 125%;
+
+}
+.title{
+    width: 540px;
+    font-family:special Elite, sans serif;
+    font-size: 325%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+nav {
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+     position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        border-bottom: 1px #CCC solid;
+
+}
+nav ul{
+    margin: 0 auto;
+    background: white;
+}
+nav ul li{
+   display: inline-block;
+    margin-right: 20px;
+
+}
+
+a{
+    color: grey;
+}
+ul ul{
+    position: absolute;
+    display: none;
+    text-align: left;
+
+}
+
+nav ul li:hover ul.premier, ul.premier li{
+    display: block;
+
+}
+/*ul ul ul{
+    position: absolute;
+    display: none;
+    text-align: left;
+}*/
+nav ul li ul li:hover ul.deuxieme{
+    display: block;
+    position: absolute;
+    left:100px;
+
+}
+

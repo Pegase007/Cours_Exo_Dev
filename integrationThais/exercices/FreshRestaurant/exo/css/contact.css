@@ -1,0 +1,105 @@
+
+header{
+	background-image: none;
+
+}
+.intro{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 35px;
+}
+
+div.contact{
+	width: 600px;
+	margin: 0 auto;
+}
+div.contact p{
+	display: block;
+	line-height: 25px;
+	border-bottom: 2px solid;
+	width: 82%;
+	margin: 0 auto;
+	font-size: 13px;
+}
+form {
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+}
+form div:first-child{
+	margin: 0 auto;
+	width: 40%;
+	margin-top: 15px;
+	padding-left: 60px;
+}
+form div:nth-child(2){
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 25px;
+
+}
+form div:nth-child(2) input{
+	width: 300px;
+	float: right;
+	line-height: 15px;
+	margin-top: 10px;
+	font-size: 10px;
+	padding-left: 5px;
+
+}
+form div:nth-child(2) label{
+	width: 150px;
+	float: left;
+	clear: both;
+	line-height: 15px;
+	margin-top: 10px;
+}
+textarea{
+	width: 90%;
+	border: none;
+}
+fieldset{
+	border: 1px solid;
+	width: 485px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+fieldset legend{
+	margin-left: 20px;
+	padding-bottom: 5px;
+}
+label{
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+
+	
+}
+input[type=submit]{
+	float: right;
+	margin-right: 55px;
+	margin-top: 10px;
+}
+table{
+	display: block;
+	line-height: 25px;
+	width: 82%;
+	margin: 0 auto;
+	font-size: 13px;
+	padding-top: 25px;
+}
+table tr td:last-child{
+	display: block;
+	margin-top: 15px;
+	padding-left: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid;
+	border-left: 1px solid;
+	border-color: lightgrey;
+
+}
+

@@ -1,0 +1,75 @@
+/*
+
+    base
+
+***************************************/
+
+body{
+    width: 545px;
+    margin: 0 auto;
+}
+
+/* Attention avec ce genre de classe portant un nom de style :
+ * il y a un problème de sémantique, mais cela est utile si
+ * l’administateur peut éditer le contenu HTML d’une partie
+ * le la page */
+.pull-left{
+    float:left;
+}
+
+.pull-right{
+    float:right;
+}
+
+/*
+
+    block
+
+***************************************/
+
+#site-header{
+    margin: 12px 0 38px 0;
+    padding: 60px 15px 0 15px;
+}
+
+#site-primary-nav{
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    overflow: hidden;
+    margin: 94px 0 0 0;
+}
+
+#site-secondary-nav{
+    margin: 0 0 0 36px;
+}
+
+/* On évite les noms comme "site-column-left", car demain
+ * elle sera peut-être à droite ou passera sur une ligne
+ * en version mobile */
+#site-column-a{
+    width: 160px;
+    margin: 0 0 0 14px;
+    float: left;
+}
+.site-column h1 {
+    margin-top: -14px;
+}
+
+#site-column-b{
+    width: 316px;
+    margin: 0 14px 0 20px;
+    padding: 0 0 0 20px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    float: left;
+}
+
+#site-footer{
+    padding: 0 17px 0 0;
+    margin: 24px 0 0 0;
+    clear: both;
+}
+#site-footer p {
+    text-align: right;
+}
+

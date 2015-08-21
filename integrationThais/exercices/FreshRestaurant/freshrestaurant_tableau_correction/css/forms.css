@@ -1,0 +1,76 @@
+
+
+/* Formulaires */
+form p {
+    text-align: left;
+}
+fieldset {
+  margin-bottom: 20px;
+  position:relative;
+  padding-top:50px;
+  border: 0;
+}
+legend {
+   font-weight: bold;
+   position:absolute;
+   top:20px;
+   left:18px;
+   border-bottom: 3px solid #CEC5B0;
+   color: #CEC5B0;
+   width: 100%;
+}
+label {
+  width: 180px;
+  display: inline-block;
+  text-align: right;
+}
+textarea {
+  vertical-align: top;
+  height: 100px;
+  resize: none;
+}
+input[type="radio"]:first-of-type {
+    margin-left: 180px;
+}
+input[type="radio"]+label,
+input[type="checkbox"]+label {
+  width: inherit;
+}
+textarea, input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):not([type="file"])  {
+  display: inline-block;
+  width: 300px;
+  border: 1px #dadada solid;
+  padding: 2px 4px;
+}
+input[type="search"] {
+  border-radius: 8px;
+  padding: 2px 10px;
+}
+:required {
+  border: 1px solid red !important;
+}
+:required:focus {
+  border: 2px solid red !important;
+  outline: none;
+}
+
+input[type="submit"] {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+:optionnal {
+  /* Champs optionnels */
+}
+:invalid {
+  /* Champs invalides */
+}
+:valid {
+  /* Valides */
+}

@@ -1,0 +1,134 @@
+body{
+	max-width: 100%;
+	background-color: #555555;
+}
+nav{
+	display: block;
+	max-width: 100%;
+
+
+}
+ul{
+	max-width: 100%;
+	display: block;
+	background-color: #333333;
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+	text-align: center;
+
+}
+ul li{
+	display: inline-block;
+	margin-right: 50px;
+	margin-left: 50px;
+	text-align: center;
+	font-size: 14px;
+
+
+
+
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+.container{
+	padding-top: 10px;
+	display: block;
+	max-width: 900px;
+
+}
+.content{
+	display: block;
+	background-color: white;
+	padding-bottom: 15px;
+
+}
+div.container{
+	margin: 0 auto;
+}
+img{
+	width: 100%;
+}
+.desktop{
+
+	padding: 5px 0 0 5px;
+
+	
+	display: block;
+	max-width:75%;
+	float: left;
+	text-align: justify;
+
+}
+.title{
+	background-color: #99BB33;
+	padding: 10px 0 10px 5px; 
+	color: white;
+	margin-bottom: 10px;
+	
+}
+.mobileoff{
+
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 27px;
+	
+	display: block;
+	background-color: #EEEEEE;
+	max-width:22%;
+	float: left;
+}
+article p:first-child,article p:nth-child(4){
+	display: block;
+	font-weight: bold;
+}
+p{
+	font-size: 12px;
+}
+@media screen and (max-width: 910px){
+	
+nav{
+	max-width: 100%
+}
+.desktop{
+	max-width: 98%;
+	float: none;
+	margin: 0 auto;
+	padding-bottom: 20px;
+
+}
+.mobileoff{
+	margin-top: 20px;
+	max-width: 98%;
+	float: none;
+	margin: 0 auto;
+
+	
+	}
+ul li{
+	
+	font-size: 16px;
+	margin-right: 25px;
+	margin-left: 25px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+@media screen and (max-width: 486px){
+	ul li{
+		display: block;
+		line-height: 20px;
+	}
+	.desktop{
+		padding: 5px 0 20px 0;
+	}
+	.mobileoff{
+	
+	max-width: 98%;
+	float: none;
+	margin: 0 auto;
+
+}

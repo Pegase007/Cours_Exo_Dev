@@ -1,0 +1,502 @@
+/*-------------------------------------------------
+			BASE redifinition balise 
+			-------------------------------------------------*/
+			html{
+				font-size: 62.5%;
+				font-family: sans-serif;
+			}
+			.content{
+				max-width: 900px;
+				margin: 0 auto;
+				font-size: 1.5rem;
+
+			}
+			
+			.blog article{
+				max-width: 100%;
+			}
+/*-------------------------------------------------
+			LAYOUT mise en page
+			-------------------------------------------------*/
+			header{
+				width: 100%;
+				font-size: 1.2rem;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+
+
+			}
+/*-------------------------------------------------
+			MODULES contenus, nav, sliders
+			-------------------------------------------------*/
+			.container{
+				margin-top: 3rem;
+				padding: 2rem 0 2rem 2rem;
+				display: flex;
+				flex-direction:row;
+			}
+			.flexrow{
+				display: flex;
+				flex-direction:row;
+
+			}
+			.flexcolumn{
+				display: flex;
+				flex-direction:column;
+			}
+			.spacearound{
+				justify-content:space-around;
+			}
+			.spacebetween{
+				justify-content:space-between;
+			}
+			.flexend{
+				justify-content:flex-end;
+			}
+			.bottom{
+				align-items:center;
+			}
+			.center{ 
+				align-items:center;
+
+			}
+			.social a{
+				margin-left: 1rem;
+			}
+			.head{
+				margin-top: 1rem;
+				font-size: 1.2rem;
+
+			}
+			section{
+				width: 71%
+			}
+
+			.menu{
+				margin-top: 5rem;
+				display: flex;
+				flex-direction:row;
+				justify-content:space-between;
+				align-items:center;
+			}
+
+
+
+			.foot{
+				max-width: 100%;
+				margin-top: 1rem;
+			}
+			.select div{
+				margin-right: 0.8rem;
+			}
+			.news{
+				background-color: #EEEEEE;
+				width: 28%;
+				margin-top: -2rem;
+				padding-left: 1rem;
+				margin-left: 1rem;
+			}
+			.news article{
+				margin-left: 1rem;
+				padding-right: 1rem;
+				padding-top: 1rem;
+
+			}
+
+			.news article img{
+				max-width: 100%;
+			}
+
+			.pages{
+				margin-top: 1.5rem;
+				width: 96%;
+			}
+			.blog div img .border{
+				max-width: 100%;
+			}
+
+			.blog article {
+				padding-right: 2rem;
+			}
+			.nav li{
+				
+				height: 3.7rem;
+				padding: 1rem;
+				margin-bottom: 0.2rem;
+				
+
+			}
+			.nav li a{
+				display: flex;
+				justify-content:space-between;
+			}
+			
+			.cat li{
+				height: 2.5rem;
+				padding: 1rem;
+				margin-bottom: 0.2rem;
+			}
+
+
+			.position{
+				margin-left: 2.5rem;
+
+			}
+
+
+			.position img{
+				padding: 0.1rem;
+
+			}
+			.border{
+				padding: 0.5rem;
+				border:1px solid #9097A9 ;
+				width: 100%;
+				
+			}
+			.news h3 img{
+				padding-right: 1rem;
+			}
+			.news ul{
+				width: 87%;
+				margin-left: 2rem;
+			}
+			.news ul li img{
+				width: 6px;
+				height: 11px;
+			}
+			.cat span{
+				font-weight: bold;
+				color: #2B3654;
+			}
+			form{
+				position: relative;
+			}
+			input[type="text"]{
+				background-color: transparent;
+				background: url(../img/search_bg.jpg) no-repeat;
+				margin-left: 1.5rem;
+				position: relative;
+				width: 19.3rem;
+				height: 3rem;
+				border: none;
+				padding-left: 1rem;
+				font-size: 1.2rem;
+				color: white;
+			}
+
+			input[type="submit"]{
+				color:transparent;
+				background: url(../img/search_btn.jpg) no-repeat;
+				position: absolute;
+				right: -1.7em;
+				top: 25%;
+				background-size: 36%;
+
+				
+				
+				border:none;
+			}
+		
+
+			footer,.bottompage{
+				display: none;
+			}
+			
+			article p{
+				padding-top: 1rem;
+				font-size: 1.5rem;
+				color: #4F5669;
+			}
+			article button {
+				color: white;
+			}
+
+
+/*-------------------------------------------------
+			STATES état selectionné 
+			-------------------------------------------------*/
+			a{
+				text-decoration: none;
+				color: #5D768D;
+			}
+
+			nav li a{
+				display: block;
+				color: #5DB1DF;
+				/*transition: 0.5s;*/
+				width: 8.7rem;
+				height: 3.7rem;
+				text-align: center;
+				padding-top: 1rem;
+				
+			}
+			nav li a:hover{
+				/*color: white;
+				font-size: thinner;
+				
+				background-color: #9097A9;
+				border-radius: 5px;
+			*/
+
+			background: url(../img/menu_bg.png) no-repeat;
+
+}
+
+			.subscribe a:hover,{
+				color:#5DB1DF;
+			}
+			section a{
+				color: #5DB1DF;
+			}
+			section a:hover{
+				color: #9097A9;
+			}
+
+
+			.pages div a{
+				color: white;
+			}
+			.nav li a:hover,.cat li a:hover{
+				color: #2B3654;
+
+			}
+			.cat li span a:hover{
+				color:#9097A9;;
+			}
+			.position a:hover,button:hover,.pages div:hover{
+				opacity: 0.8;
+			}
+
+
+/*-------------------------------------------------
+			THEME couleur, images
+			-------------------------------------------------*/
+			body{
+				background-color: #333333;
+				background:
+				url(../img/bg_1.jpg) repeat-x,
+				url(../img/bg_2.jpg);	
+
+			}
+			
+
+			.subscribe{
+				color: #4F5669
+			}
+			nav{
+				font-size: 1.5rem;
+				font-weight: bold;
+
+			}
+			
+
+			
+			.container{
+				border: 1.5rem solid #1B2026 ;
+				background-color: white;
+
+			}
+			
+
+			h1{
+				margin: 2rem 0 2rem 0;
+				font-size: 3rem;
+				color: #5DB1DF;
+				font-weight: bold;
+			}
+			h2{
+				font-weight: bold;
+				color: #4F5669;
+				font-size: 2.2rem;
+
+			}
+			button{
+				border: none;
+				transition: all 0.5s;
+			}
+
+
+
+			.news h3{
+				color: white;
+				background-color: #9097A9;
+				margin-left: 1rem;
+				font-weight: bold;
+				font-size: 1.5rem;
+				padding: 0.5rem 0 0.5rem 0.5rem;
+				
+			}
+			
+			.news article p{
+				font-size: 1.6rem;
+			}
+			h3{
+
+				font-weight: lighter;
+				color: #4F5669;
+				font-size: 1.5rem;
+				margin: 0rem 0 2rem 0;
+			}
+			
+			
+			article button{
+
+				background-color: #5DB1DF;
+				margin-left: 0.9rem;
+				line-height: 4rem;
+				
+				font-size: 1.7rem;
+			}
+			
+			.news article, .news div{
+				padding-bottom: 2rem;
+			}
+
+			
+			.pages div:nth-child(1),.pages div:nth-child(3),.pages div div{
+				background-color: #5DB1DF;
+				padding: 0.8rem;
+
+			}
+			
+
+			.news .nav li{
+				background-color:#D0D4DE;
+			}
+
+			
+
+
+			@media only screen and (max-width: 900px){
+
+
+				.content{
+					width: 95%;
+					margin: 0 auto;
+				}
+				.dstp{
+					display: none;
+
+				}
+				section{
+					width: 100%
+				}
+				.container{
+					display: flex;
+					flex-direction:column;
+					padding: 2rem 0 0rem 2rem;
+				}
+
+				.menu{
+					align-items:flex-start;
+					flex-direction:column;
+				}
+				.menu img{
+
+					
+					justify-content:flex-start;
+					
+				}
+				nav{
+					padding-top: 2rem;
+					width: 100%;
+				}
+
+				.menu ul{
+					width: 100%;
+					justify-content:space-between;
+				}
+				.news{
+					width: 100%;
+					margin: 0 0 0 -2rem;
+					padding: 1rem 0;
+				}
+				.news h3{
+					margin-left: 0;
+				}
+
+				footer{
+					margin-top: 2rem;
+					display: flex;
+					background-color: #1B2026;
+					flex-wrap:wrap;	
+					padding: 2rem 10rem 2rem 10rem;
+				}
+				ul{
+					width: 50%;
+					padding-bottom: 2rem;
+					color: grey;
+				}
+				ul h5{
+					color: #9097A9;
+					padding-bottom: 1.5rem;
+				}
+				ul li{
+					font-size: 1.5rem;
+					padding-top: 0.8rem;
+				}
+				ul:nth-child(3){
+					
+					flex-wrap:wrap;	
+					
+					padding-right: 8rem;
+					
+				} 
+				ul:nth-child(3) li:first-child{
+					width: 100%;
+
+				} 
+				ul:nth-child(3) li:nth-child(n+2){
+					width: 25%;
+					margin-top: 1rem;
+
+				} 
+				.bottompage{
+					display: flex;
+					width: 100%;
+					padding: 1rem 10rem 2rem 10rem;
+
+				}
+				div.bottompage ul{
+					width: 100%;
+					color: grey;
+				}
+				
+
+			}
+			@media only screen and (max-width: 600px){
+
+				.subscribe{
+					display: none;
+				}
+				.head{
+					justify-content:flex-end;
+				}
+				.content{
+					width: 95%;
+					margin: 0 auto;
+				}
+				.container{
+					border: none;
+				}
+				footer,.bottompage{
+					padding: 1rem 2rem 1rem 2rem;
+				}
+				
+				ul:nth-child(n+3){
+					width: 100%;
+
+				} 
+
+				ul:nth-child(3) li:nth-child(n+2){
+					width: 25%;
+					margin-top: 1rem;
+
+				} 
+				article button{
+					font-size: 1rem;
+				}
+				
+
+			}

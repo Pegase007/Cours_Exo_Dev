@@ -1,0 +1,111 @@
+body{
+
+}
+.container{
+	margin-top: 50px;
+}
+.row img{
+	border: 2px solid #095573;
+	padding: 5px;
+	width: 150%;
+}
+div.title{
+	font-size: 50px;
+	font-weight: bold;
+	color: #FCE94D;
+
+}
+header div .white{
+	color: white;
+	font-size: 18px;
+}
+.height{
+	height: 21px;
+}
+header div.white div:nth-child(3){
+	padding-left: 40px;
+}
+header .row{
+	background-color: #095573;
+	padding: 5px;
+}
+.experience {
+	border: 1px solid #726F64;
+	padding: 15px;
+
+}
+.experience .right{
+	padding-left: 30px;
+	border-left: 1px solid #726F64;
+}
+.experience .left{
+	padding-right: 30px;
+}
+/*.experience .right{
+	border-top: 1px solid #726F64;
+	border-bottom: 1px solid #726F64;
+	border-right: 1px solid #726F64;
+	padding: 10px;
+}*/
+.subtitle{
+	font-size: 20px;
+	color: #095573;
+}
+.date{
+	padding-top: 20px;
+	text-align: right;
+	padding-right: 20px;
+	font-size: 20px;
+	color: #095573;
+}
+.description{
+	font-size: 13px;
+	color: #726F64
+	text-align:justify;
+	padding-top: 10px;
+
+}
+
+.subtitleb{
+	font-size: 20px;
+	color: #095573;
+	
+}
+.experience img{
+	width: 100%;
+	border: 1px solid #095573;
+}
+.portfolio{
+	margin-top: 20px;
+	text-align: center;
+
+}
+.box div:nth-child(n+6){
+
+border: 1px solid #095573;
+padding: 2px;
+}
+
+@media screen and (max-width: 768px){
+
+	.row img{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	header div.white div:nth-child(3) {
+  padding-left: 14px;
+	}
+	.subtitle {
+	  font-size: 34px;
+	}
+	.experience {
+  	border: none; 
+  	}
+  	.date{
+  		text-align: left;
+  	}
+  	.experience .right {
+	  padding-left: 30px;
+	  border-left: 1px solid #726F64;
+}
+}

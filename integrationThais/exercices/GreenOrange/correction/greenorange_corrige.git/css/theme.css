@@ -1,0 +1,104 @@
+/*
+
+    base
+
+***************************************/
+
+h1{
+    color: rgb(249, 188, 2);
+}
+
+h2{
+    color: rgb(114, 170, 96);
+}
+
+p{
+    color: rgb(145, 145, 145);
+}
+
+/*
+
+    common
+
+***************************************/
+
+.img-primary {
+    box-shadow:
+        0 0 0 0.2em rgb(255, 255, 255),
+        0 0 0 0.4em rgb(114, 170, 96);
+}
+.list > li{
+    line-height: 1;
+    color: rgb(114, 170, 96);
+    /* fallback */
+    background: url(../img/puce.png) no-repeat;
+    background:
+        linear-gradient(
+            90deg,
+            rgb(249, 188, 2) 16px,
+            rgb(255, 255, 255) 16px,
+            rgb(255, 255, 255) 20px,
+            rgb(235, 235, 235) 20px,
+            rgb(235, 235, 235) 100%
+        );
+}
+
+/*
+
+    site-header
+
+***************************************/
+
+#site-header{
+    background: url(../img/header_bg.png) no-repeat;
+}
+
+/*
+
+    site-primary-nav
+
+***************************************/
+
+#site-primary-nav{
+    border-bottom-color: rgb(114, 170, 96);
+}
+
+.primary-nav  a{
+    background: rgb(114, 170, 96);
+    color: rgb(255, 255, 255);
+}
+
+.primary-nav  a:hover{
+    background: rgb(249, 188, 2);
+}
+
+/*
+
+    site-right-column
+
+***************************************/
+
+#site-column-b{
+    border-left-color: rgb(235, 235, 235);
+}
+
+/*
+
+    site-secondary-nav
+
+***************************************/
+
+.secondary-nav a{
+    color: rgb(145, 145, 145);
+}
+
+/*
+
+    article
+
+***************************************/
+
+.read-more {
+    color: rgb(249, 188, 2);
+}
+

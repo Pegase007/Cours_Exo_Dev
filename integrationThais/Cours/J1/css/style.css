@@ -1,0 +1,66 @@
+body{
+    background: url(../img/nz0276.jpg) fixed no-repeat 50% 50%;
+   /* = background-image:url(../img/nz0276.jpg) ;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; */
+}
+h1{
+    font-family: Tangerine;
+}
+p{
+    color: blue;
+
+}
+.vert{
+
+    color: green;
+    font-size: 10px;
+    font-family: Arial;
+    font-size: italic;
+    font-weight: bold;
+    background-color: #ffffff
+}
+#rouge{
+    color: red;
+}
+.500{
+    font-weight: 500;
+    font-family: Arial;
+}
+.900{
+    font-weight: 900;
+    font-family: Arial;
+}
+a{
+    text-decoration: none;
+    color: red;
+    display: block;
+}
+a:hover{
+    color: green;
+    text-decoration: underline;
+    font-size: 18px;
+}
+.cadre{
+    float: left;
+    padding: 20px; 
+    margin: 0 auto;
+    border:5px solid red;
+    width:300px;
+    text-align: center;
+    /*min-height: 300px;*/
+}
+.cadre2{
+    float: left;
+    padding: 20px; 
+    margin: 0 auto;
+    border:5px solid green;
+    width: 300px;
+    text-align: center;
+    /*min-height: 300px;*/
+}
+.clear{
+   clear:both;
+
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr" class="page-css">
+    <head>
+        <title>Typographie — CSS</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/table.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Typo</h1>
+        </header>
+
+        <main>
+
+                <h2>Le CSS et la typographie</h2>
+                <p>Voici une liste de propriétés CSS intéressantes en typographie :</p>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">La propriété…</th>
+                            <th>Utilisation</th>
+                        </tr>
+                    </thead>
+                    <!-- La balise tfoot est placée avant le tbody dans le html mais apparaitra après en terme de rendu -->
+                    <tfoot>
+                        <tr>
+                            <th colspan="3"><small>Source : <a href="https://developer.mozilla.org/fr/" title="MDN — Mozilla Developer Network">Mozilla Developer Network</a></small></th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td rowspan="5" class="prefix">font-</td>
+                            <td>size</td>
+                            <td>change la taille de la police</td>
+                        </tr>
+
+                        <tr>
+                            <td>style</td>
+                            <td>permet de définir l'aspect d'une famille de police : normal, italique ou oblique.</td>
+                        </tr>
+                        <tr>
+                            <td>variant</td>
+                            <td>sélectionne une police normale ou en petite capitale pour la font-family spécifiée.</td>
+                        </tr>
+                        <tr>
+                            <td>weight</td>
+                            <td>définit la graisse de la police.</td>
+                        </tr>
+                        <tr>
+                            <td>family</td>
+                            <td>indique une liste de fontes -ou de familles génériques de fontes- à appliquer à l'élément sélectionné, par ordre de priorité. Contrairement aux autres propriétés CSS, les valeurs sont séparées par des virgules « , » pour indiquer que se sont des alternatives.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5" class="prefix">text-</td>
+                            <td>align</td>
+                            <td>est utilisée pour décrire l'alignement des lignes de texte. text-align ne contrôle pas l'alignement des éléments, <strong>uniquement leur contenu en ligne</strong>.</td>
+                        </tr>
+
+                        <tr>
+                            <td>transform</td>
+                            <td>définit la casse du texte d'un élément. Il est ainsi possible d'afficher un texte en lettres capitales, tout en minuscules ou tous les mots avec leur première lettre capitale.</td>
+                        </tr>
+                        <tr>
+                            <td>decoration</td>
+                            <td>est utilisée pour définir la décoration du texte (formatage), telle que souligné, clignotant, barré, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>shadow</td>
+                            <td>accepte une liste d'effets d'ombrage séparés par des virgules qui peuvent être appliqués au texte et aux décorations de texte de l'élément.</td>
+                        </tr>
+                        <tr>
+                            <td>indent</td>
+                            <td>définie la quantité d'espace horizontal qui doit être laissée avant le début de la première ligne d'un élément contenant du texte. L'espacement horizontal se fait en accord avec la bord gauche (ou droit pour les dispositions de droite à gauche) de l'élément contenant le texte.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="no-prefix">color</td>
+                            <td>définit la couleur de premier-plan du contenu de texte d'un élément, ainsi que les décorations définies grâce à text-decoration. Elle n'affecte pas d'autres caractéristiques de l'élément. Un nom plus approprié serait être text-color, mais des raisons historiques et son apparition dans CSS Level 1 en ont fait autrement.
+                        </tr>
+                    </tbody>
+                </table>
+
+
+        </main>
+    </body>
+</html>

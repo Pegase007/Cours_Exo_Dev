@@ -1,0 +1,12 @@
+
+/*/////////////////////////// STYLES GNERIQUES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+body{
+	background: url('../img/bg_header.jpg') no-repeat top center, url('../img/bg_body.jpg');
+}
+header{
+	background: url('../img/tasse_the.jpg') no-repeat 15px 195px;
+}
+
+/*/////////////////////////// NAV PRINCIPALE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/*/////////////////////////// HEADER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/

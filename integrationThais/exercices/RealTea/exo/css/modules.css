@@ -1,0 +1,70 @@
+/*/////////////////////////// NAV PRINCIPALE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.main-nav{
+	text-align: right;
+}
+.main-nav>div{
+	padding-right: 50px;
+}
+.main-nav ul>li{
+	display:inline-block;
+	margin-right: 25px;
+}
+.main-nav li>a{
+	display:block;
+	padding: 3px 0;
+	color:#FFFFFF;
+	font-family: 'Melbourne light basic', sans-serif;
+	font-style: normal;
+	font-size:1rem;
+}
+/*/////////////////////////// HEADER \\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+header>img{
+	margin-top: 30px;
+}
+
+header h1 {
+    margin: 220px 70px 0 0;
+    font-weight: normal;
+    width: 59%;
+}
+header h1 span{
+	margin-top: 20px;
+}
+header>a{
+	display: block;
+	text-align:right;
+	margin: 15px 70px 0 0;
+	font-size:0.9rem;
+	transition:color 0.5s ease-out;
+}
+header>a:before{
+	content:url('../images/puce_header_more.png');
+	margin-right:5px;
+	transition:all 0.2s ease-in;
+}
+header article{
+	margin-top: 30px;
+    width: 32%;
+	display: inline-block;
+	vertical-align: top;
+}
+header article+article{
+	margin-left: 2%;
+}
+header article h2{
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
+header article:nth-child(5) h2:before{
+	content:url('../images/icone1.jpg');
+	margin-right: 10px;
+}
+header article:nth-child(6) h2:before{
+	content:url('../images/icone2.jpg');
+	margin-right: 10px;
+}
+header article:nth-child(7) h2:before{
+	content:url('../images/icone3.jpg');
+	margin-right: 10px;
+}

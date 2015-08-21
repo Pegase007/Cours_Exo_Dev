@@ -1,0 +1,134 @@
+	 * apt-get install node 
+     * apt-get install npm &&
+     * apt-get install --yes build-essential
+permet de verifier la version de node js
+     * nodejs -v
+creer un lien symbolique
+	  * ln -s /usr/bin/nodejs /usr/sbin/node
+verifier la version de node	  
+	  * node -v
+install gulp
+	  * npm install --global gulp
+	  * npm install --save-dev gulp
+verifier gulp
+      * gulp -v
+
+lignes de console
+	  * cd /monrepertoirs
+      * ls -al lister les repertoires
+      * pwd : recuperer lendroit pou je suis dans l'rborescxence 
+
+* CRéer un fichier gulpfile.js
+// gulpfile.js...
+*
+*
+*/
+// Simple tache qui s'appel "copier" et qui copie l'ensemble de mes images PNG
+
+* npm install -g gulp-concat --allow-root 
+* npm install -g gulp-minify-css --allow-root
+*/
+var gulp      = require('gulp');
+  	minifyCss = require('gulp-minify-css'), // Minification des CSS
+    concat = require('gulp-concat');
+    
+compresser images
+    imagemin  = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+Sass
+    sass      = require('gulp-sass')
+retirer css non utilisée   
+uncss = require('gulp-uncss'),
+
+zip 
+var gulp = require('gulp');
+var zip = require('gulp-zip');
+
+
+
+
+
+  gulp.task('copier', function () {
+    console.log('copy...:)');
+    return gulp.src('img/*.png')
+            .pipe(gulp.dest('imgfinal/'));
+});
+
+// console: gulp copier
+
+
+gulp.task('copierPDF', function () {
+
+    
+    console.log('copy...:)');
+
+    return gulp.src('download/*.pdf')
+            .pipe(gulp.dest('downloaded/'));
+});
+
+
+
+	gulp.task('css', function() 
+	{
+	    return gulp.src(['./css/*.css', './stylesheets/*.css'])    // Prend en entrée les 
+			.pipe(concat('all.css'))
+	    .pipe(minifyCss()) 
+	    .pipe(gulp.dest('./dist/'));  // Sauvegarde le tout dans /src/style
+	  
+	});
+
+
+		gulp.task('js', function() 
+		{
+		  return gulp.src(['./js/*.js', './javascripts/*.js'])    // Prend en entrée les fichiers *.src.js
+		    .pipe(concat('all.min.js'))
+		    .pipe(uglify())
+		    .pipe(gulp.dest('./dist/'));
+		});
+modifications en temps reel
+		gulp.task('watch', function() 
+		{
+		   gulp.watch(['./css/*.css', './stylesheets/*.css'], ['css']);
+		   gulp.watch(['./js/*.js'], ['js']);
+		   gulp.watch(['./img/*.png'], ['copier']);
+
+		});
+
+		gulp.task('default', ['watch']);
+		 //console : gulp
+
+img compress
+gulp.task('images', function () {
+    return gulp.src('img/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
+
+
+
+
+uncss
+gulp.task('css', function() 
+{
+    return gulp.src(['./css/*.css', './stylesheets/*.css'])    // Prend en entrée les 
+		.pipe(concat('all.css'))
+    .pipe(uncss({
+          html: ['index.html']
+      }))
+    .pipe(minifyCss()) 
+    .pipe(gulp.dest('./dist/'));  // Sauvegarde le tout dans /src/style
+  
+});
+
+ZIPER
+ gulp.task('zip', function () {
+      return gulp.src('src/*')
+          .pipe(zip('archive.zip'))
+          .pipe(gulp.dest('dist'));
+  });
+
+

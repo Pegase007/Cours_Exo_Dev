@@ -1,0 +1,15 @@
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+header{
+	padding:0 20px;
+	font-family: "Melbourne_regular_basic";
+	font-weight: normal;
+}
+p{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 0.9rem;
+	font-weight: normal
+}

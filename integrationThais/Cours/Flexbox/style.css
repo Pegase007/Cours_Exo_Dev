@@ -1,0 +1,62 @@
+div{
+	border: 1px solid black;
+}
+.containerFlex{
+	display: flex;
+list-style-type: none;
+justify-content:space-around;
+ /*inline-flex*/
+	/*flex-direction:row; /*en ligne*/
+				/*row-reverse en ligne à l'envers*/
+				/*column*/
+				/*column-reverse en colonne à l'envers*/
+	/*flex-wrap:no-wrap; par default, pas de retour à la ligne*/
+				/*wrap retour à la ligne*/
+				/*wrap-reverse à la ligne mais les lignes sont inversées*/
+	/* flex-flow:row wrap-reverse; permet d'assembler flex-direction et flex-wrap*/
+
+	/*dimensionnement horizontal*/
+	/*justify-content:flex-start;*/
+					/*flex-end*/
+					/*center*/
+					/*space-between elements repartis de maniere uniforme*/
+					/*space-around elements repartis de maniere uniforme sans coller aux bords*/
+	/*alignement vertical*/
+	/*align-items: flex-start; tout les blocs en haut du container*/
+				/*flex-end tout les blocs en bas;*/
+				/*center; centrés par leur centre*/
+				/*stretch; les elements prennent toute la hauteur du container*/
+				/*baseline; les elements sont alignés par rapport à une ligne de base*/
+	/*contenu de plusieures lignes*/
+	/*align-content:flex-start; tout les blocs en haut du container*/
+				/*flex-end tout les blocs en bas;*/
+				/*center; centrés verticalement par leur centre*/
+				/*stretch; les elements prennent toute la place du container*/
+				/*space-between; premiere ligne en haut, derniere ligne en bas, l'ensemble du contenu est reparti*/
+				/*space-around; alignement en haut et en bas avec une marge sur les bords */
+	
+}
+	/*jouer sur les items - les enfants des container*/
+	/*ul li:first-child{ order:3;}
+	ul li:nth-child(2){ order:1;}
+	ul li:nth-child(3){ order:2;}
+	ul li:nth-child(4){ order:4;}*/
+
+	/*dimensionner les blocs proportionnellement*/
+	ul li:first-child{ flex-grow:1;}
+/*	ul li:nth-child(2){ flex-grow:2;}
+	ul li:nth-child(3){ flex-grow:2;}*/
+	ul li:nth-child(4){ flex-grow:1;}
+
+	li{display: block; text-align: center;}
+	/*ul li:first-child{ flex-shrink:0;}*/
+	ul li:nth-child(2){ flex-shrink:1;}
+	ul li:nth-child(3){ flex-shrink:1;}
+	/*ul li:nth-child(4){ flex-shrink:0;}*/
+
+	/*dissocier ->*/
+	/*mettre dans .contentFlex align-items:flex-start*/
+	/*placer dans un des ul li:nth-child(X){ align-self:flex-end;} ce bloc la va s'aligner en bas alors que les autres restent en haut*/
+
+
+

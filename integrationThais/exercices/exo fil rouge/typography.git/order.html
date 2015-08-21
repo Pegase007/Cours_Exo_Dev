@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr" class="page-order">
+    <head>
+        <title>Typographie — Commande</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/forms.css">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/hyphenator/Hyphenator.js"></script>
+        <script src="js/common.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <h1>Typo</h1>
+            <p>
+                Nous vendons de bien jolie choses, faites votre choix !
+            </p>
+        </header>
+
+        <main>
+
+            <form action="#" method="post"  enctype="multipart/form-data">
+
+                <h2>Commande</h2>
+
+                <fieldset>
+                    <legend>Informations personnelles</legend>
+
+                    <p>
+                        <!-- Remarquez que l’id est différent du name :
+                            le "for" du label fait référence à l’id de l’input,
+                            et ce dernier doit être unique -->
+                        <input type="radio" value="1" name="civility" id="civility_1" required>
+                        <label for="civility_1">Monsieur</label>
+
+                        <input type="radio" value="2" name="civility" id="civility_2" required>
+                        <label for="civility_2">Madame</label>
+
+                        <input type="radio" value="3" name="civility" id="civility_3" required>
+                        <label for="civility_3">Mondame</label>
+
+                    </p>
+                    <p>
+                        <label for="lastname">Nom :</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </p>
+                    <p>
+                        <label for="firstname">Prénom :</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email :</label>
+                        <!-- Notez le type "email" -->
+                        <input type="email" id="email" name="email" required>
+                    </p>
+
+                    <p>
+                        <label for="password">Mot de passe :</label>
+                        <!-- Notez le type "password" -->
+                        <input type="password" id="password" name="password" required>
+                    </p>
+
+                    <p>
+                        <label for="website">Site internet :</label>
+                        <!-- Notez le type "url" -->
+                        <input type="url" id="website" name="website">
+                    </p>
+
+                    <p>
+                        <!-- Sous firefox et IE9 pour l’instant pas de gestion du type date
+                             il faudra ajouter du javascript en polyfill -->
+                        <label for="birthday">Date de naissance :</label>
+                        <input type="date" id="birthday" name="birthday">
+                    </p>
+
+                    <p>
+                        <label for="idcard">Carte d’identité :</label>
+                        <input type="file" id="idcard" name="idcard">
+                    </p>
+
+
+                </fieldset>
+                <fieldset>
+                    <legend>Votre commande</legend>
+
+                    <p>
+                        <label for="shipping">Mode de livraison :</label>
+                        <select id="shipping" name="shipping" required>
+                            <option value="">Votre choix :</option>
+                            <option value="1" selected>À domicile, livraison express</option>
+                            <option value="2">À domicile</option>
+                            <option value="3">Point relai</option>
+                            <option value="4">Point relai, tarif lent</option>
+                            <option value="5">Pigeon voyageur</option>
+                            <option value="6">Drones</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label>Assurances :</label>
+
+                        <input type="checkbox" id="insurance_1" value="1" name="insurance[]">
+                        <label for="insurance_1">Casse</label>
+                        <input type="checkbox" id="insurance_2" value="2" name="insurance[]">
+                        <label for="insurance_2">Vol</label>
+                        <input type="checkbox" id="insurance_3" value="3" name="insurance[]">
+                        <label for="insurance_3">Accident nucléaire</label>
+                    </p>
+
+                    <p>
+                        <label for="comment">Commentaire :</label>
+                        <textarea id="comment" name="" cols="30" rows="10" placeholder="Pas plus de 300 caractères" maxlength="300"></textarea>
+                    </p>
+
+                    <p>
+                        <!-- Contrôle avancé avec une expression régulière -->
+                        <label for="code">Code invitation :</label>
+                        <input type="text" id="code" name="code" pattern="[a-zA-Z0-9]+" title="Code d’invitation, chiffres et lettres uniquement">
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Suivant">
+                </p>
+
+            </form>
+        </main>
+        <footer>
+            <p><small>Source : <a href="http://fr.wikipedia.org/wiki/Typographie">Wikipedia</a></small></p>
+        </footer>
+    </body>
+</html>

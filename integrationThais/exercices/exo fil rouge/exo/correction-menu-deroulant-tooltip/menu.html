@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Menu</title>
+	<style type="text/css">
+	body {
+		font-family: sans-serif;
+		width: 80%;
+		margin: 1em auto;
+		background-color: #FFF;
+	}
+	ul { /* style global des listes*/
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		background-color: #333;
+		background: -webkit-linear-gradient(top,#777,#333); /*dégradé safari / chrome */
+		background: -moz-linear-gradient(top,#777,#333);/*dégradé FF */
+		color: #fff;
+	}
+	ul.menu { /*style liste parente*/
+		position: relative; /* si absolute menu passe par dessus le body et prend tout le reste de la largeur*/
+		width: 100%;
+	}
+	ul.menu li { /*menu*/
+		padding: 0.5em 2em;
+		border-bottom: 1px solid #444;
+		cursor: pointer;
+		/*display: inline-block;*/
+	}
+	ul.menu>li {
+		display: inline-block;/*force l'affichage en ligne du menu parent // si appliqué sur tous les li, les deux menus sont en ligne*/
+	}
+	ul ul {
+		position: absolute; /* sous-menu qui passe par dessus le parent // si relative, sous menu décale parent*/
+		display: none; /*cache le sous menu*/
+		margin-left: -2em;
+	}
+	ul li:hover ul{
+		display: block; /*affiche le sous menu*/
+	}
+	li:hover{
+		background: #c33;
+	}
+
+	/* ##################################################
+	BONUS:; TOOLTIP
+	################################################## */
+
+	a[data-tooltip] {
+		position: relative; /*si absolute <a> passe sur texte qui suit / si pas précisé, tooltip en bas de la page*/
+		
+	}
+	a[data-tooltip]::after { /*interieur tooltip*/
+		content: attr(data-tooltip);
+		position: absolute; /*pour que le tooltip s'affiche par dessus le texte*/
+		width: 200px;
+		bottom: 30px;
+		left: 50%; /*centrage du tooltip*/
+		margin-left: -100px;
+		padding: 5px;
+		color: #fff;
+		background-color: rgba(0,0,0,0.9);
+		display: none;
+		text-align: center;
+		border-radius: 4px;
+	}
+	a[data-tooltip]:hover::before, a[data-tooltip]:hover::after {
+		display: block;
+	}
+	a[data-tooltip]::before { /*fleche*/
+		content: "";
+		display: none;
+		position: absolute;
+		width: 0;
+		height: 0;
+		bottom: 10px;
+		left: 50%;
+		margin-left: -10px;
+		border: 10px solid transparent;
+		border-top-color: rgba(0,0,0,0.9);
+	}
+	</style>
+</head>
+<body>
+	<h1>Menu</h1>
+	<ul class="menu">
+		<li>Lien 1</li>
+		<li>Lien 2
+			<ul>
+				<li>Lien 2.1</li>
+				<li>Lien 2.2</li>
+				<li>Lien 2.3</li>
+			</ul>
+		</li>
+		<li>Lien 3
+			<ul>
+				<li>Lien 3.1</li>
+				<li>Lien 3.2</li>
+			</ul>
+		</li>
+	</ul>
+	<section>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac arcu tortor. Vivamus cursus tortor id ultrices auctor. Duis tincidunt in arcu vitae porta. Aliquam erat volutpat. Phasellus eu velit vel metus venenatis vulputate. Sed risus mi, molestie a nulla molestie, mollis venenatis est. Fusce nec egestas magna. Integer condimentum magna auctor fermentum condimentum. Sed eget ligula eget elit viverra accumsan eu nec nulla. Phasellus sit amet ipsum arcu. Nam ut velit ipsum. Mauris ullamcorper pharetra mi, ultrices tristique mauris viverra non. Aliquam eu nisl sodales neque posuere congue.</p>
+	<p>In lobortis laoreet leo eu scelerisque. Quisque egestas, turpis vel tristique fringilla, magna nibh venenatis lorem, ac porttitor turpis turpis vel velit. Suspendisse ut libero eleifend, malesuada est a, fringilla metus. Aliquam a risus quis libero semper sollicitudin quis sit amet dolor. Quisque egestas vulputate urna, dapibus pretium erat gravida at. Praesent ut justo ac nunc tincidunt pulvinar vel faucibus ligula. <a href="#" data-tooltip="texte du tooltip">Integer volutpat</a> varius risus, eu pharetra lacus semper a. Pellentesque lacus justo, tincidunt eu sem in, dapibus euismod mi. Quisque a leo at magna vulputate tincidunt. Nunc ipsum augue, cursus ut purus vel, lacinia consectetur tellus. Mauris pellentesque, sapien eget mollis laoreet, augue dui dapibus massa, id gravida lorem nulla quis risus. Sed commodo, erat at elementum semper, urna est lacinia mauris, eget lobortis leo justo fringilla nunc. Donec facilisis metus vel condimentum facilisis. Donec venenatis, felis a vestibulum sagittis, lectus ipsum iaculis turpis, non ultricies erat sem nec ante.</p>
+	<p>Sed sit amet sapien laoreet, sodales dui eu, tincidunt diam. Donec fermentum ligula sed diam aliquam, nec faucibus orci scelerisque. In id mauris nec ipsum euismod bibendum at nec mi. Vivamus tristique in augue a ullamcorper. Mauris lacinia varius congue. Sed sollicitudin lobortis interdum. Nullam placerat adipiscing consequat. Ut a tincidunt elit, eu commodo augue.</p>
+	</section>
+</body>
+</html>

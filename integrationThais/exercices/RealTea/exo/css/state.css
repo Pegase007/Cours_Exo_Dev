@@ -1,0 +1,11 @@
+.main-nav li>a:hover{
+	background: url('../images/menu_hover.png') no-repeat top left;
+	background-size:cover;
+}
+
+header>a:hover{
+	color:#000000;
+}
+header>a:hover:before{
+	margin-right:15px;
+}

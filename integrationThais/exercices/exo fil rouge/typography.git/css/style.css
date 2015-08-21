@@ -1,0 +1,477 @@
+
+/*
+ * La grille est constituée de lignes de 30 pixels de hauteur.
+ * Dans cet exercice on s’efforce de garder un rhythme typographique
+ */
+
+
+/* Police personnalisée pour les titres
+ * Ici on utilise une version basique avec un seul format
+ * pour aller en douceur, elle ne sera pas compatible au maximum */
+@font-face {
+    font-family: "SpecialElite";
+    /* caniuse.com/woff */
+    src: url(../fonts/SpecialElite.woff) format("woff");
+    /* Il est primordial de bien préciser la bonne graisse
+     * pour un rendu professionnel, attention aux faux gras */
+    font-weight: 400;
+    /* Et également le bon style, attention au faux italiques */
+    font-style: normal;
+}
+
+/* Autre famille de polices, "Cardo", disposant de plusieurs fontes :
+ *
+ * "Cardo" est une police de caractère
+ * "Cardo italic" est une fonte, "Cardo Bold" également
+ */
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+/* Si on ne précisait pas le chemin de la font "italic"
+ * l’utilisation de ce style ferait un faux italique : berk !
+ * Notez l’apparence du z en version italic et comparez
+ * en commentant la déclaration ci-dessous
+ */
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-italic.woff) format("woff");
+    font-weight: 400;
+    /* Indispensable */
+    font-style: italic;
+}
+@font-face {
+    font-family: "Cardo";
+    src: url(../fonts/cardo/cardo-bold.woff) format("woff");
+    /* Indispensable */
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    /* On centre le site sur une petite largeur
+     * de manière à avoir des lignes pas trop longues */
+    max-width: 25em;
+    margin: 0 auto;
+    padding: 1.5em 1.25em;
+
+    /* Taille et couleur de base des textes = 16px
+     *
+     * Il est primordial de comprendre l’importance de cette ligne.
+     * Toutes les valeurs en em vont se baser sur cette valeur si
+     * elle n’a pas été remplacée. En version bureau cette valeur
+     * deviendra 125%, soit 20 pixels (125% × 16 pixels).
+     * Par conséquent, en version bureau, toutes les polices feront
+     * 25% de plus, mais également toutes les mesure effectuées en em
+     * (margin, width…)
+     *
+     * Rappel : les em sont proportionnels à la taille de police de leur
+     * élément.
+     *
+     * En mobile, notre grille verticale sera de 16 × 1.5 = 24 pixels
+     * En bureau,                                20 × 1.5 = 30 pixels
+     *
+     * Les polices principales auront les tailles :
+     * En mobile : 16, 24, 40, 64px
+     * En bureau : 20, 30, 50, 80px
+     *
+     * C’est une suite de fibonacci :
+     *
+     * 20 + 30 = 50
+     * 30 + 50 = 80
+     *
+     * Cet outil est interessant pour simuler le résultat :
+     * lamb.cc/typograph/
+     */
+    font-size: 100%;
+    color: #333;
+
+    /* Par défaut les lignes auront une hauteur de 1 fois
+     * et demi la taille de police.
+     * Notez bien l’absence d’unité */
+    line-height: 1.5;
+
+    /* On précise les polices "fallback" dans le cas
+     * ou Times n’est pas installé (linux)
+     */
+    font-family: "Cardo", "Times New Roman", "FreeSerif", serif;
+
+    /* Optimisation des polices pour la lecture (et non les performances) */
+    text-rendering: optimizeLegibility;
+    /* Règlages propres au moteur Webkit */
+    /* Empêche le navigateur de redimensionner les 
+     * petites polices */
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    /* Règlages propres à Firefox Mac Os X (aliasing) */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Astuce pour voir la grille */
+   
+    background-size: 100% 1.5em;
+    background-image: -webkit-linear-gradient(#eee .05em, transparent 1px);
+    background-image: -moz-linear-gradient(#eee .05em, transparent 1px);
+    background-image: linear-gradient(#eee .05em, transparent 1px);
+   
+}
+
+/* Le titre principal et les titres d’articles */
+h1, h2 {
+    font-size: 4em;
+    /* On ne met pas de texte en majuscule dans le HTML :
+     * il s’agit de présentation = de CSS */
+    text-transform: uppercase;
+    /* 30 pixels n’est pas indiqué au hasard :
+     * c’est la hauteur des lignes de notre grille */
+    margin:  .375em 0 .375em 0;
+    /* On écrase le line-height par défaut */
+    line-height: 1.125;
+}
+
+h1, h2, h3 {
+    /* Utilisation de notre police personnalisée */
+    font-family: "SpecialElite", sans-serif;
+    /* Attention à utiliser la bonne graisse au risque
+     * d’avoir un rendu amateur ! */
+    font-weight: 400;
+}
+/* On écrase les styles par défaut défini précedemment pour les titres d’articles */
+h2 {
+    font-size: 2.5em;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 1.8em 0 .6em 0;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 2em 0 1em 0;
+}
+/* Petite fleuron pour habiller les titres secondaires */
+h3:before {
+    content: "❧ ";
+}
+
+/* Styles des liens par défaut */
+a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px dashed #BBB;
+    /* caniuse.com/css-transitions */
+    transition: all .3s;
+}
+a:visited {
+    color:#888;
+
+}
+a:hover {
+    color: #000;
+    border-bottom-width: 0;
+}
+
+/* Ne pas oublier le lien au focus (tab) et active (clic) */
+a:active,
+a:focus {
+    /* enlève la bordure disgracieuse par défaut */
+    outline: 0;
+    /* important : il faut un remplacement visuel pour 
+     * ne pas dégrader l’ergonomie du site */
+    border-bottom: 2px solid #000;
+}
+
+
+dfn {
+    font-style: normal;
+}
+
+p {
+    margin: 1.5em 0;
+    /* Attention au texte justifié sur le web !
+     * Bien utiliser le plugin Hyphenator ou 
+     * contrôler chaque texte sur-mesure */
+    text-align: justify;
+}
+form p {
+    text-align: left;
+}
+small {
+    font-size: .6em;
+    font-family: "Open Sans", "Arial", sans-serif;
+    color: #999;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    word-spacing: .3em;
+}
+
+/* --------------------- $Citations ------------------------ */
+
+/* La citation en bas de page */
+figure {
+    text-align: left;
+    margin: 3em 0 3em 0;
+}
+figcaption {
+    text-align: right;
+    font-size: .7em;
+    font-variant: small-caps;
+    padding-bottom: 1.071428571em;
+    line-height: 2.142857143;
+}
+figcaption:before {
+    content: "— ";
+}
+header figcaption {
+    padding: 0;
+}
+
+/* Quotes */
+q {
+    font-style: italic;
+    display: block;
+    /* Quotes francaises */
+    quotes: "\00AB\0000a0" "\0000a0\00BB";
+    text-indent: -0.8em;
+    text-align: justify;
+    line-height: 1.666666667;
+    margin-bottom: 15px;
+    font-size: .9em;
+}
+/* Quotes anglaises : détecte l’attribut langue sur la balise */
+q:lang(en) {
+    quotes: "“\0000a0" "\0000a0”";
+    text-indent: inherit;
+}
+q:before,
+q:after {
+    font-weight: bold;
+    color: #CCC;
+}
+q:before {
+    content: open-quote;
+}
+q:lang(en):before {
+    font-size: 2em;
+    /* Sortie du flux, la quote ne rempli plus l’espace
+     * car on ne précise pas left, top, right ou bottom */
+    position: absolute;
+    /* Puis on la décale sur la gauche */
+    margin-left: -.6em;
+    margin-top: -.5em;
+}
+q:after {
+    content: close-quote;
+}
+q:lang(en):after {
+    content: "";
+}
+
+/* --------------------- $Header ------------------------ */
+
+/* Cas particulier de la citation du header */
+header figure, header q {
+    margin: 0;
+}
+header q span {
+    display: block;
+}
+/* word spacing demo: we align the word everything together 
+ * and also create a visual staircase ; this is a graphical illustration
+ * of the quote */
+header q span:last-child {
+    word-spacing: .34em;
+}
+
+.page-order header > p {
+    text-align: center;
+}
+/* --------------------- $Main ------------------------ */
+
+/* Sélecteur "+" = frère direct.
+ * Les premiers paragraphes des articles ne seront
+ * pas concernés par ce sélecteur */
+article p + p {
+    /* indentation de la première ligne */
+    /*text-indent: 2em;*/
+}
+article h2 + p:first-letter {
+    font-size: 2.7em;
+    line-height: 1;
+    font-weight: 400;
+    font-family: "SpecialElite", sans-serif;;
+
+    margin: 0 .08em -.2em 0;
+    padding: .2em .08em 0 0;
+
+    float: left;
+    color: #333;
+}
+
+
+/* --------------------- $Footer ------------------------ */
+body > footer {
+    margin-top: 3em;
+    text-align: center;
+}
+body > footer small {
+    text-align: center;
+    display: block;
+    line-height: 1.5;
+}
+body > footer:before {
+    font-size: 3.6em;
+    line-height: 1.25;
+    display: block;
+    margin-bottom: .4166666em;
+    content: "❦";
+}
+body > footer a {
+    border: 0;
+}
+
+
+/* Un responsive de quelques lignes peut faire une différence 
+ * énorme si le style est bien conçue.
+ */
+@media only screen and (min-width: 481px) {
+    body {
+        /* Utilisation intelligente des em et des pourcent :
+         * notre responsive devient très simple —
+         * en changeant la taille de police de base, tout le site
+         * va s’adapter et on va conserver le rythme typographique */
+        font-size: 125%;
+    }
+
+    /* --------------------- $Header --------------------- */
+
+    /* Petite décoration en desktop pour habiller l’espace libre */
+    header h1 {
+        letter-spacing: .2em;
+    }
+    header h1:before {
+        content: "–";
+    }
+    header h1:after {
+        content: "–";
+    }
+
+    header figcaption {
+        /* On remonte la légende pour la citation en entête, 
+         * qui est un cas particulier */
+        margin: -4.285714286em 0 0 0;
+    }
+
+    header figure {
+        /* On compense la place perdue par la marge négative
+         * de la figcaption */
+        padding-bottom: 3em;
+    }
+
+    /* Le titre principal et les titres d’articles */
+    h1, h2 {
+        text-align: center;
+        letter-spacing: 3px;
+    }
+}
+
+/* Menu déroulant CSS */
+.menu {
+    text-align: left;
+}
+.menu ul, .menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.menu li {
+    margin-left: 1em;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+.menu a:active,
+.menu a:focus {
+    border: 0;
+    background: #444;
+    color: #FFF;
+}
+
+@media only screen and (min-width: 800px) {
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        border-bottom: 1px #CCC solid;
+    }
+    .menu a {
+        color: #666;
+        text-transform: uppercase;
+        font-size: .8em;
+        padding: .125em .3125em;
+        display: block;
+        border-radius: 12px;
+        transition: all .3s ease-in;
+    }
+    .menu a:hover {
+        background: #EEE;
+        color: #000;
+        text-decoration: none;
+    }
+    /* cache les ul de niveau 2 et + */
+    .menu ul ul {
+        /* Cache */
+        position: absolute;
+        left: -10000em;
+        border: 1px solid #CCC;
+        /* pas de bordure sur les niveau 2 */
+        border-top:0;
+        padding: .125em 0;
+        -moz-box-shadow: 2px 2px 10px 0px #DDD;
+        -webkit-box-shadow: 2px 2px 10px 0px #DDD;
+        -o-box-shadow: 2px 2px 10px 0px #DDD;
+        box-shadow: 2px 2px 10px 0px #DDD;
+    }
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        background: #FDFDFD;
+    }
+    .menu ul ul ul {
+        /* Bordure sur niveau 2+ */
+        border-top: 1px solid #CCC;
+    }
+    .menu li {
+        /* Pour positionner les enfants (ul) en absolu */
+        position: relative;
+        list-style: none;
+        display: block;
+        /* Évite les retours à la ligne (car pas de width spécifié) */
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        padding: .3em;
+    }
+    .menu li li {
+        padding: .2em .3em;
+    }
+    /* Les li de niveau 1 sont en ligne */
+    .menu > ul > li {
+        display: inline-block;
+    }
+    /* Affiche au survol des li le ul enfant direct */
+    .menu li:hover > ul {
+        left: 0;
+        top: 100%;
+    }
+    /* Pour les niveaux 2+, le menu est placé à gauche,
+     * c'est-à-dire à 100% de la largeur du li sur la gauche */
+    .menu ul ul li:hover > ul {
+        left: 100%;
+        top:0;
+    }
+}

@@ -1,0 +1,143 @@
+/*
+
+    base
+
+***************************************/
+
+body{
+    /* Fallback pour les vieux navigateurs */
+    background: #FFF url(../img/body_bg.png) repeat-x 0 7.75em;
+
+    /* Les plus récents utiliseront le gradient */
+    background: linear-gradient(
+        rgb(205, 197, 176) 0,
+        rgb(205, 197, 176) 47px,
+        rgb(255, 255, 255) 47px,
+        rgb(255, 255, 255) 49px,
+        rgb(211, 62, 4) 49px,
+        rgb(211, 62, 4) 50px,
+        rgb(255, 255, 255) 50px,
+        rgb(255, 255, 255) 100%
+    ) 0 7.75em no-repeat;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-shadow: 0.05em 0 0 rgba(0, 0, 0, 0.3);
+}
+
+h2{
+    color: rgb(154, 144, 117);
+}
+
+h3,
+.article > p::first-line,
+.highlight {
+    color: rgb(165, 169, 22);
+    font-weight: bold;
+}
+
+p{
+    color: rgb(174, 174, 174);
+}
+
+a{
+    color: rgb(83, 83, 83);
+}
+
+/*
+
+    common
+
+***************************************/
+
+.container-bg{
+    background: url(../img/header_bg.png) no-repeat 0 3em;
+}
+
+.emphasis{
+    color: rgb(211, 62, 4);
+}
+
+.site-column,
+.column-title{
+    border-color: rgb(221, 221, 221);
+}
+
+/*
+
+    site-primary-nav
+
+***************************************/
+
+.primary-nav  a{
+    color: rgb(158, 155, 136);
+}
+.primary-nav  a:before {
+    color: rgb(172, 172, 172);
+}
+
+/*
+
+    site-column-a
+
+***************************************/
+.site-column .column-title {
+    /* La bordure est légèrement décalée */
+    margin-top: -.5em;
+}
+
+/*
+
+    site-column-b
+
+***************************************/
+
+.recipe-description{
+    color: rgb(83, 83, 83);
+}
+
+/*
+
+    site-footer
+
+***************************************/
+
+.site-primary-footer{
+    background: rgb(154, 144, 117);
+}
+
+.primary-footer {
+    text-align: center;
+}
+
+.primary-footer li {
+    display: inline-block;
+}
+.primary-footer li + li:before {
+    content: "|";
+    margin: 0 .3em;
+
+}
+
+.primary-footer, .primary-footer a{
+    color: rgb(255, 255, 255);
+}
+
+.secondary-footer{
+    color: rgb(154, 144, 117);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

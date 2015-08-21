@@ -1,0 +1,10 @@
+a{
+    color: grey;
+}
+a:hover{
+    color:blue;
+    }
+nav li a{
+    text-decoration: none;
+    color: grey;
+}

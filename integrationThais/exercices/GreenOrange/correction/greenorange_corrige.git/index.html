@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Green Orange</title>
+
+        <!-- En production, compressez cela en un seul CSS ! -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/modules.css" />
+        <link rel="stylesheet" href="css/states.css" />
+        <link rel="stylesheet" href="css/theme.css" />
+    </head>
+    <body>
+
+        <header id="site-header">
+
+            <div>
+                <a href="#">
+                    <!-- Le alt porte le contenu textuel de l’image : ni plus, ni moins -->
+                    <img src="img/logo.png" alt="Studio greenorange" />
+                </a>
+            </div>
+
+            <div id="site-secondary-nav">
+                <ul class="secondary-nav">
+                    <li><a href="#">location</a></li>
+                    <li><a href="#" class="is-active">about us</a></li>
+                </ul>
+            </div>
+
+            <nav id="site-primary-nav">
+                <ul class="primary-nav">
+                    <li><a href="#" class="is-active">about us</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id="site-column-a" class="site-column">
+            <!-- On considère ce contenu éditable en interface d’administration -->
+            <h1>who we are</h1>
+            <img src="img/who.png" alt="who we are" class="img-primary" />
+            <article class="article">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <a href="#" class="read-more">read more</a>
+            </article>
+        </section>
+
+        <section id="site-column-b" class="site-column">
+            <!-- On considère ce contenu éditable en interface d’administration -->
+            <h1>what we do</h1>
+            <img src="img/what.png" alt="what we do" class="img-primary pull-left" />
+            <article class="article article-small pull-left">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+            </article>
+            <ul class="list">
+                <li>Consectetur adipisicing elit</li>
+                <li>Sed do eiusmod tempor</li>
+                <li>Incididunt ut labore et</li>
+            </ul>
+            <a href="#" class="read-more">read more</a>
+        </section>
+
+        <footer id="site-footer">
+            <p><small>YouCompany.Com © 2004 | Privacy Policy</small></p>
+        </footer>
+
+    </body>
+</html>

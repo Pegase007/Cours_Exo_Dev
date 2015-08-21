@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Fresh Restaurant</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Cantarell:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/modules.css" />
+        <link rel="stylesheet" href="css/states.css" />
+        <link rel="stylesheet" href="css/theme.css" />
+        <link rel="stylesheet" href="css/contact.css" />
+    </head>
+    <body>
+        <div class="bg">
+      
+        <header class="clearfix"> 
+                <nav>
+                <ul>
+                    <li><a href="index.html">Home page</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#" class="selected">Menus</a></li>
+                    <li><a href="contact.html" >Contacts</a></li>
+                </ul>
+                </nav>
+                <h1>
+                    LEXIQUE
+                </h1>
+                <div class="intro"> Pour des repas delicieux!</div>
+         </header> 
+         <div class="contact">   
+         <p> Lexique des menus  </p>
+
+		<table>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dicta a reprehenderit, possimus rem, consequuntur suscipit doloribus quasi ratione veritatis nulla doloremque ullam veniam obcaecati aperiam, quia rerum numquam perspiciatis.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus eligendi repellat recusandae. Quibusdam ducimus vel nesciunt culpa qui voluptatem repellendus animi debitis, fugit molestiae, beatae consequuntur, molestias tenetur, delectus ea!</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus rerum, tempore earum cum enim perspiciatis quas nihil ducimus ipsa aut optio, accusantium sequi, expedita veniam autem facere, vitae maiores alias.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio accusantium repellendus aliquam accusamus, maxime rerum molestiae repellat necessitatibus sunt facilis. At nobis, porro labore reprehenderit cum perferendis. Illo, placeat. Commodi.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio voluptates accusantium nam numquam velit voluptatum maiores officiis nihil consequuntur sit quia, eaque architecto, repudiandae, ut maxime quidem, esse excepturi possimus.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium totam cumque assumenda aspernatur magni quo vel, veniam, voluptate deserunt similique, et deleniti quibusdam illum doloribus temporibus rerum id ipsa necessitatibus?</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tempora amet natus quam necessitatibus, laudantium provident illum ut, numquam cumque neque fugiat dolore vitae obcaecati accusamus, beatae. Dignissimos, voluptatum, aperiam.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ipsam id fugiat in nisi saepe quibusdam placeat quae perferendis enim aut qui, vitae recusandae ratione reprehenderit similique ipsa quis dignissimos.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam suscipit similique harum asperiores, officia facere rem quisquam nobis accusantium quas iure optio consectetur nostrum vitae esse fugiat ipsum reprehenderit veniam.</td>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ducimus provident ullam nemo, debitis quo deleniti libero, magnam tempore, expedita id animi. Aut doloribus eius, delectus, quos necessitatibus consectetur ducimus!</td>
+            </tr>
+        </table>
+
+
+
+		</div> 
+                
+             <footer>
+                 <div class="bg">
+                 <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="vline"><a href="#">About us</a></li>
+                    <li class="vline"><a href="#">Location</a></li>
+                    <li class="vline"><a href="#">Menu</a></li>
+                    <li class="vline"><a href="#">Partners</a></li>
+                    <li class="vline"><a href="#">News</a></li>
+                    <li class="vline"><a href="#">Contact Us</a></li>
+                 </ul>
+
+                 </div>
+             </footer>
+             <div class="footer">Copyright  &copy Your Company Name </div>
+         
+    </body>
+    

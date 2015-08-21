@@ -1,0 +1,177 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers/ fonction qui sert aux vieux navigateurs */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* virer les petit cercles*/
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.top_box{
+	width: 1000px;
+	background-color: lightblue;
+	border: 1px solid black;
+	margin: 0 auto 20px auto;
+	font-family: wendy one;
+	font-size: 200%;
+	height: 251px;
+	
+
+}
+.top_box img{
+	float: left;
+	margin: 25px 0 0 25px;
+	vertical-align: baseline;
+
+}
+.top_box h1 {
+	float: left;
+	margin: 100px 0 0 35px;
+	vertical-align: baseline;
+	
+}
+
+.text{
+	background-color: lightblue;
+	width: 998px;
+	margin: 0 auto 20px auto;
+	border: 1px solid black;
+	overflow: hidden;
+	min-height: 287px;
+
+}
+.nav{
+	width:300;
+	height: 34px;
+	float: left;
+}
+
+.nav ul{
+	width: 200px;
+	margin: 20px 0px 0 20px;
+
+}
+.nav ul li{
+	width:200px;
+	height: 34px;
+	margin: 2px;
+	font-family: verdana;
+	
+}
+
+.nav ul li img{
+	float: left;
+	padding: 5px;
+
+}
+.nav li a{
+	display: block;
+	width: 200px;
+	background-color: black;
+	background-image: url(../img/puce.gif);
+	background-position: 5px 5px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 90%;
+	text-transform: uppercase;
+	color: #ffffff;
+	float: left;
+	padding: 10px 10px 10px 40px;
+	font-family: verdana;
+
+
+}
+.nav li a:hover{
+	background-color: white;
+	color: orange;
+	text-indent: 15px;
+	background-position: 15px 5px;
+}
+
+
+
+.article{
+	padding: 25px 0 0 300px;
+	font-family: verdana;
+	font-size: 85%;
+	
+
+
+}
+.article h2{
+	font-family: wendy one;
+	font-size:200%;
+	color: orange;
+	padding-bottom: 20px;
+	float: left;
+
+}
+.article p{
+	padding-right: 25px;	
+	width: 690px;
+	float: left;
+	text-indent: 20px;
+	line-height: 150%;
+	background: url(../img/lettrine.gif) no-repeat;
+	font-family: verdana;
+
+
+}
+.hidden{
+	visibility: hidden;
+
+}
+
+footer{
+	background-color: lightblue;
+	width: 998px;
+	margin: 0 auto 20px auto;
+	border: 1px solid black;
+	overflow: hidden;
+	height: 58px;
+
+	
+
+}
+footer p{
+	padding: 20px;
+	font-size: 120%;
+	font-family: verdana;
+}
+

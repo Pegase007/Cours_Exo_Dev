@@ -1,0 +1,66 @@
+@import "global"
+
+
+$backg: #87E990
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+=transition($animation)
+  -webkit-transition: $animation
+  -moz-transition: $animation
+  -ms-transition: $animation
+  transition: $animation
+
+
+.well
+  color: $general-color
+
+.bob
+
+  width: 50px
+  text-align: center
+  display: flex
+  content-align: center
+
+#box
+  @extend .bob
+  +transition(transform 2s)
+  background-color: $backg
+  +border-radius(10px)
+
+  &:hover
+    transform: rotate(180deg)
+  p
+    &:first-child
+      a
+        color: #b81900
+
+      a:hover
+        background-color: #FFCCCC
+        width: 200px
+        height: 200px
+
+  p
+    &:nth-child(2)
+      a
+        @extend .well
+        &:hover
+          color: #004276
+
+  p
+    &:nth-child(3)
+      a
+        color: #060200
+      a:hover
+        color: #b81900
+
+
+
+
+
+
+

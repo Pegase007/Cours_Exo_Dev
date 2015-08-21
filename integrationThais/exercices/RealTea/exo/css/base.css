@@ -1,0 +1,33 @@
+*{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+html{
+	font-size:100%;
+	line-height: 1.2;
+}
+body{
+	font-family: Verdana, Arial, sans-serif;
+	font-size:62.5%;
+	color:#595959;
+	background-color: #FFFFFF;
+}
+h1 {
+    font-size: 2.2rem;
+}
+h2 {
+    font-size: 1.8rem;
+}
+a{
+	text-decoration: none;
+}
+.clear{
+	clear:both;
+}
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}

@@ -1,0 +1,44 @@
+h1 {
+  font-size: rem;
+  color: #e1e463;
+  background-color: #81ff79;
+}
+
+.well,
+#box p:nth-child(2) a {
+  color: #000000;
+}
+
+.bob,
+#box {
+  width: 50px;
+  text-align: center;
+  display: flex;
+  content-align: center;
+}
+
+#box {
+  -webkit-transition: transform 2s;
+  -moz-transition: transform 2s;
+  -ms-transition: transform 2s;
+  transition: transform 2s;
+  background-color: #87E990;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#box:hover {
+  transform: rotate(180deg);
+}
+
+#box p:nth-child(2) a:hover {
+  color: #004276;
+}
+
+h1 {
+  font-size: rem;
+  color: #e1e463;
+  background-color: #81ff79;
+}

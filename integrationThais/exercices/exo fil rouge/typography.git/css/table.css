@@ -1,0 +1,51 @@
+.page-css body {
+    max-width: 35em;
+}
+
+table {
+    border: 1px #CCC solid;
+    width: 100%;
+    font-family: sans-serif;
+
+}
+th,td {
+    border: 1px #CCC solid;
+    padding: 4px 10px 10px 10px;
+    font-size: 12px;
+}
+th {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Les propriétés écrités en 2 colonnes (font- + size) sont collées 
+ * (pas de padding à gauche/droite) */
+.prefix {
+    padding-right: 0;
+    border-right-style: dotted;
+    border-right-color: #DDD;
+}
+/* Les td qui suivent les td.prefix,
+ * les td qui sont les premiers de la lignes mais qui ne portent pas la classe
+ * no-prefix */
+.prefix + td, tr td:first-child:not(.no-prefix)  {
+    padding-left: 0;
+    border-left-style: dotted;
+    border-left-color: #DDD;
+}
+
+thead th {
+    border-bottom: 3px #333 solid;
+}
+tfoot th {
+    padding: 15px;
+}
+
+td {
+    vertical-align: top;
+}
+
+.prefix {
+    text-align: right;
+}
+
