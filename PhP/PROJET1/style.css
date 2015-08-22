@@ -1,0 +1,15 @@
+html{
+    font-size: 62.5%;
+}
+#movies{
+    margin-top: 10rem;
+
+}
+.carousel-control.left,.carousel-control.right{
+    background: none;
+
+}
+.caption {
+    max-height: 336px;
+    overflow: hidden;
+}
