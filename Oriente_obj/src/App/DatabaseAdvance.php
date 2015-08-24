@@ -364,7 +364,27 @@ class DatabaseAdvance extends Database
     }
 
 
+/**
+ * Recuperer tous les films de la base de données et controler si un des films à une visibility 0
+ */
+    public function getFilms()
+    {
+        $query = $this->connect()->query('SELECT visible FROM movies');
+        return  $query->fetchAll();
 
+    }
+
+    public function checkVisibility(){
+
+        foreach ($this->getFilms() as $film){
+
+            if( $film['visible'] != 1){
+
+                throw new \Exception('Not visible');
+            }
+        }
+
+    }
 
 
 

@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "d0d36cd34484ac5b70d097f4f2765cd7",
+    "packages": [
+        {
+            "name": "symfomany/canicule",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Symfomany/canicule.git",
+                "reference": "2e7bb845c2d6dee516cafc58893e621186853d3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Symfomany/canicule/zipball/2e7bb845c2d6dee516cafc58893e621186853d3c",
+                "reference": "2e7bb845c2d6dee516cafc58893e621186853d3c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julien Boyer",
+                    "email": "julien@meetserious.com"
+                }
+            ],
+            "description": "Ma Super Librairie :)",
+            "keywords": [
+                "3WA",
+                "Canicule"
+            ],
+            "time": "2015-08-22 11:15:27"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "symfomany/canicule": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

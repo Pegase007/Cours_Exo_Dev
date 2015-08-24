@@ -1,9 +1,18 @@
 {
 //  cree une mise a jour automatique et charger toutes les classes via autoload
   "autoload":{
-    "psr-4":{"":"src/"}
+    "psr-4":{"":"src/"},
+    "files":[
+        "helpers/custom_helpers.php",
+        "helpers/Bootstrap.php"
+    ],
+    "minimum-stability":"dev",
+    "classmap": ["lib"]
 
+
+
+  },
+  "require": {
+    "Symfomany/canicule": "dev-master"
   }
-
-
 }

@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'User' => $baseDir . '/lib/User.php',
+    'Util' => $baseDir . '/lib/Util.php',
 );

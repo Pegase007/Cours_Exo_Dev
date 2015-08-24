@@ -25,6 +25,18 @@
 //include"src/App/DatabaseAdvance.php";
 require __DIR__ . '/vendor/autoload.php';
 
+echo Util::camelize("fgfgfdgdfgsgs gfdgdfgd gfdgfdgd");
+echo User::Info('Banana','bizz',5);
+
+echo beautiful(
+    bold
+    (Util::camelize(" dfsf sdfsd fdsfds fds fsfs"))
+    );
+
+echo alert("booooo");
+
+use App\Actors
+
 /**
  * création d'un objet Product (instance de la classe Product)
  */
@@ -577,6 +589,85 @@ $actor1 = new \App\Actors();
 //$actor1->getUpdate($actor1->getTestarray2(),"actors",39);
 //$actor1->getDelete("actors",'35');
 echo $actor1->getRetrieve("actors","firstname","Martin");
+
+
+///**
+// * Throw exception if quantity is not a number or is equal to 0
+// */
+//
+//
+//$quantity= new \App\Product();
+//$quantity->setQuantity(5);
+//
+//
+///*
+// * Throws exception if visibility ==0 or not a number
+// */
+//
+//$visible= new \App\Product();
+//$visible->setVisible(True);
+//
+//
+//$date= new \App\Product();
+//$date -> setDatePublication(new \DateTime('2014-03-15'));
+//
+//$cat=new \App\Product();
+//$cat->setCategory($produit);
+
+
+//$prix=new \App\Product();
+
+/**
+ * Try Catch...lancer une exception
+ */
+echo "<h2> TRY CATCH</h2>";
+try{
+
+    /**
+     * Throw exception if quantity is not a number or is equal to 0
+     */
+
+
+    $quantity= new \App\Product();
+    $quantity->setQuantity(5);
+
+
+    /*
+     * Throws exception if visibility ==0 or not a number
+     */
+
+    $visible= new \App\Product();
+    $visible->setVisible(False);
+
+
+    $date= new \App\Product();
+    $date -> setDatePublication(new \DateTime('2014-03-15'));
+
+    $cat=new \App\Product();
+    $cat->setCategory($produit);
+
+
+} catch(Exception $e){
+// envoyer un mail à l'admin sur l'erreur en question
+
+    echo "<pre>".$e->getMessage()." à la ligne: ".$e->getLine()." dans le fichier: ".$e->getFile();
+}
+
+echo" <h4> Try catch film </h4>";
+
+try{
+    $visible= new \App\DatabaseAdvance();
+    $visible->checkVisibility();
+    echo "lala";
+} catch(Exception $e){
+
+    echo "<pre>".$e->getMessage()." line: ".$e->getLine()." File: ".$e->getFile();
+}
+
+echo" <h4> Try catch deux images nécessaires à la création de produits </h4>";
+
+
+
 ?>
 </div>
 </body>
