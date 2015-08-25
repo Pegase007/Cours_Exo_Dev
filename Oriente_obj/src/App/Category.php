@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Exception\AvailableException;
 use Lib\Beautiful;
 
 
@@ -26,11 +27,21 @@ class Category
     protected $visible;
     protected $products = array();
 
-    public function __construct()
+    public function __construct($title = "", Array $products = array())
     {
 //        $this->visible = $etat;
         $this->products = array();
         $this->beautiful = new Beautiful(); //00: agrégation
+        $this->title = $title; //00: agrégation
+
+
+        if (count($products)<1){
+
+            throw new AvailableException( $this." n'a aucun produit");
+
+        }
+        $this->products = $products;
+
     }
 
     /**
@@ -78,6 +89,15 @@ class Category
      */
     public function setVisible($visible)
     {
+
+        if(!is_bool($visible)){
+
+            throw new \Exception("Attention la visibilité n'es pas bouléenne");
+
+        }elseif( $visible == false){
+
+            throw new AvailableException( $this );
+        }
         $this->visible = $visible;
     }
 
@@ -94,6 +114,12 @@ class Category
      */
     public function setProducts($products)
     {
+
+        if (count($products)<1){
+
+            throw new AvailableException( $this." n'a aucun produit");
+
+        }
         $this->products = $products;
     }
 
@@ -154,5 +180,18 @@ class Category
 //
 //
 //    }
-//
+
+
+    public function __toString(){
+
+        if($this->getTitle()==''){
+            return " ";
+        }else{
+           return $this->getTitle();
+        }
+
+    }
+
+
+
 }

@@ -231,7 +231,7 @@ echo $user3->plusAge($user1);
 $category1 = new \App\Category(1);
 $category1->setTitle("Hola");
 $category1->setDescription("description");
-$category1->setVisible("visible");
+//$category1->setVisible("visible");
 
 $category1-> ajoutProduit($product2);
 $category1-> ajoutProduit($product);
@@ -572,7 +572,8 @@ echo $decliInt->getParent($decliInt2);
  */
 
 echo"<h2>Traits</h2>";
-$produit = new\App\Category();
+$produit = new \App\Category();
+$produit->setTitle('produit');
 $produit->setPosition(2);
 echo $produit->getPosition();
 
@@ -644,6 +645,7 @@ try{
 
     $cat=new \App\Product();
     $cat->setCategory($produit);
+    $cat->setTitle('CAT');
 
 
 } catch(Exception $e){
@@ -663,7 +665,57 @@ try{
     echo "<pre>".$e->getMessage()." line: ".$e->getLine()." File: ".$e->getFile();
 }
 
-echo" <h4> Try catch deux images nécessaires à la création de produits </h4>";
+//echo" <h4> Try catch deux images nécessaires à la création de produits </h4>";
+//
+//
+//$img1=new \App\Product();
+//$img1->setImages("dsfdfsfs");
+//
+//$img2=new \App\Product();
+//$img2->setImages("dsfdsfdsfs");
+//
+//$images=new \App\Product();
+//$images->setImages($img1,$img2);
+//
+//var_dump($images);
+//try{
+//
+//
+//     $deuxImg= new \App\Product( $images );
+//
+//
+//
+//}catch(Exception $e){
+//
+//    echo "<pre>".$e->getMessage()." line: ".$e->getLine()." File: ".$e->getFile();
+//}
+
+
+echo "<h2> Exception specifique </h2>";
+
+
+
+try{
+
+    $category2= new \App\Category();
+    $category2->setTitle("This is my title");
+    $category2->setVisible(false);
+
+}catch(\App\Exception\AvailableException $e){
+
+
+    echo "<div class='alert alert-warning'>
+                    La catégorie {$e->getMessage()} est indisponible
+                    </div>";
+
+}
+catch (Exception $e){
+
+    // envoyer un mail à l'administrateur sur l'erreur en question
+    echo "<pre>".$e->getMessage()." line: ".$e->getLine()." File: ".$e->getFile();
+
+}
+
 
 
 

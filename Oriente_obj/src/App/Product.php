@@ -8,6 +8,7 @@ namespace App;
  * Prototype ou Moule des produits d'une boutique
  */
 
+use App\Exception\AvailableException;
 use Lib\Beautiful;
 
 //permet d'inscrire une class dans une classe
@@ -118,7 +119,8 @@ class Product extends Catalogue implements Visible
         $this->beautiful = new Beautiful(); //00: agrégation
 
         if($prix < $prixht){
-            throw new \Exception("Le prix HT doit etre supérieur ou égal au prix TTC");
+
+            throw new AvailableException("Le prix HT doit etre supérieur ou égal au prix TTC");
         }
 
         $this->prix = $prix;
@@ -127,6 +129,23 @@ class Product extends Catalogue implements Visible
 
     }
 
+
+//    public function __construct(Array $images=array() )
+//    {
+//        $this->images = $images;
+//        $this->visible = 1;
+//        $this->panier = array();
+//        $this->beautiful = new Beautiful(); //00: agrégation
+////
+//        var_dump(count($images));
+//
+//        if ( count($images) < 2  ){
+//
+//            throw new \Exception("Il manque des images");
+//
+//        }
+//
+//    }
 
     /**
      * @return ht
@@ -378,7 +397,11 @@ class Product extends Catalogue implements Visible
      */
     public function getImages()
     {
-        return $this->images;
+        if ( count($images) < 2  ){
+
+            throw new \Exception("Il manque des images");
+
+        }
     }
 
     /**
@@ -493,6 +516,7 @@ class Product extends Catalogue implements Visible
         }
         $this->category = $cat;
     }
+
 
 
 
