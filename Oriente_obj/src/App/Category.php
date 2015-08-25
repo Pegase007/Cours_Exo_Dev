@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Exception\AvailableException;
+use App\Exception\OutOfStockException;
 use Lib\Beautiful;
 
 
@@ -27,20 +28,20 @@ class Category
     protected $visible;
     protected $products = array();
 
-    public function __construct($title = "", Array $products = array())
+    public function __construct()
     {
 //        $this->visible = $etat;
         $this->products = array();
         $this->beautiful = new Beautiful(); //00: agrégation
-        $this->title = $title; //00: agrégation
+        $this->products = array();
 
 
-        if (count($products)<1){
-
-            throw new AvailableException( $this." n'a aucun produit");
-
-        }
-        $this->products = $products;
+//        if (count($products)<2){
+//
+//            throw new OutOfStockException( $this." n'a aucun produit");
+//
+//        }
+//        $this->products = $products;
 
     }
 
@@ -96,7 +97,7 @@ class Category
 
         }elseif( $visible == false){
 
-            throw new AvailableException( $this );
+            throw new OutOfStockException( $this );
         }
         $this->visible = $visible;
     }
@@ -112,12 +113,12 @@ class Category
     /**
      * @param mixed $products
      */
-    public function setProducts($products)
+    public function setProducts(Array $products=array())
     {
 
-        if (count($products)<1){
+        if (count($products)<2){
 
-            throw new AvailableException( $this." n'a aucun produit");
+            throw new OutOfStockException( $this." n'a aucun produit");
 
         }
         $this->products = $products;

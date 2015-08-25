@@ -1,0 +1,13 @@
+.container{
+    background-color:black;
+}
+
+
+form{
+    margin-top: 2rem;
+    color: white;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: grey;
+    }

@@ -1,0 +1,48 @@
+
+input{
+	width: 100%;
+}
+label{
+	width: 30%;
+}
+form{
+	width: 690px;;
+	margin: 0 auto;
+}
+.title_id{
+	padding-top: 2rem;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width: 100%;
+}
+fieldset{
+	margin-top: 2rem;
+}
+.quatite_couleur{
+	padding-top: 2rem;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width: 100%;
+}
+.prix{
+	padding-top: 2rem;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width: 100%;
+}
+
+.cb{
+	padding-top: 2rem;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width: 100%;
+}
+
+div.carte img{
+	max-height: 10px;
+	max-width: 10px;
+}

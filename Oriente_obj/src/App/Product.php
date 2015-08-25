@@ -9,6 +9,7 @@ namespace App;
  */
 
 use App\Exception\AvailableException;
+use App\Exception\OutOfStockException;
 use Lib\Beautiful;
 
 //permet d'inscrire une class dans une classe
@@ -463,17 +464,85 @@ class Product extends Catalogue implements Visible
      * @param $quantity
      * @throws \Exception
      */
-    public function setQuantity($quantity){
+//    public function setQuantity($quantity){
+//
+//        if ($quantity == 0 || !is_int($quantity)){
+//
+//
+//            throw new \Exception('Votre quantité ne doit pas être égale à 0');
+//
+//        }
+//        $this->quantity=$quantity;
+//
+//    }
 
-        if ($quantity == 0 || !is_int($quantity)){
-
-
-            throw new \Exception('Votre quantité ne doit pas être égale à 0');
+    /**
+     * V2 utiliser une class exception
+     * @param $quantity
+     * @throws OutOfStockException
+     */
+    public function setQuantity($quantity)
+    {
+        if(!is_int($quantity)){
+            throw new Exception($this);
 
         }
-        $this->quantity=$quantity;
+        elseif($quantity == 0){
+            throw new OutOfStockException($this);
+        }
 
+        $this->quantity = $quantity;
     }
+
+//=============================================PROPOSITION MOUS==========================================================//
+//    /**
+//     * @param $datePublication
+//     * @throws \Exception
+//     */
+//    public function setDatePublication($datePublication)
+//    {
+//        /* Méthode 1
+//        if (!preg_match('/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $date))  {
+//            throw new \Exception('Format de date invalide');
+//        }
+//
+//        Méthode 2
+//        if ( get_class($datePublication) != "DateTime" ){
+//            throw new \Exception('Date non valide');
+//        }*/
+//        $now = new \DateTime();
+//        if(!($datePublication instanceof \DateTime) || !is_object($datePublication) || ($datePublication > $now) ){
+//            throw new \DateException("Ceci n'est pas une date");
+//        }
+//
+//
+//        $this->datePublication = $datePublication;
+//
+//    }
+//
+//
+//    /**
+//     * @return string
+//     * @throws Exceptions\DescriptionException
+//     */
+//    public function getDescription()
+//    {
+//        $beautiful = new Beautiful();
+//
+//        if ( !preg_match("/^[\w\s]{20,}$/", $this->description)){
+//            throw new DescriptionException($this->title);
+//        }
+//
+//        return $beautiful->paragraph($this);
+//    }
+
+    //===========================================================================================================//
+
+
+
+
+
+
 
     /**
      * @return category
@@ -516,7 +585,6 @@ class Product extends Catalogue implements Visible
         }
         $this->category = $cat;
     }
-
 
 
 

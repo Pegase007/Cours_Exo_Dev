@@ -19,4 +19,8 @@ class AvailableException extends \Exception
     }
 
 
+
+
+
+
 }
