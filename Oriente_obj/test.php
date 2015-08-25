@@ -35,7 +35,6 @@ echo beautiful(
 
 echo alert("booooo");
 
-use App\Actors
 
 /**
  * création d'un objet Product (instance de la classe Product)

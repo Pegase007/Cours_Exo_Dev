@@ -6,18 +6,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Symfomany/canicule.git",
-            "reference": "2e7bb845c2d6dee516cafc58893e621186853d3c"
+            "reference": "42d4c60c2b4cdd303382d5d36d0a0155d7498df1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Symfomany/canicule/zipball/2e7bb845c2d6dee516cafc58893e621186853d3c",
-            "reference": "2e7bb845c2d6dee516cafc58893e621186853d3c",
+            "url": "https://api.github.com/repos/Symfomany/canicule/zipball/42d4c60c2b4cdd303382d5d36d0a0155d7498df1",
+            "reference": "42d4c60c2b4cdd303382d5d36d0a0155d7498df1",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4.0"
         },
-        "time": "2015-08-22 11:15:27",
+        "time": "2015-08-24 18:08:24",
         "type": "library",
         "installation-source": "source",
         "autoload": {
