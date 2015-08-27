@@ -12,6 +12,7 @@ use App\Exception\AvailableException;
 use App\Exception\OutOfStockException;
 use Lib\Beautiful;
 
+
 //permet d'inscrire une class dans une classe
 
 //exemple d'utilisation

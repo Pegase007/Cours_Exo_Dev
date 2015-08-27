@@ -18,13 +18,13 @@ class Product
      */
     protected $productReference;
     /**
-     * @var $productBasePrice is the base price before reduction and taxes
+     * @var $BasePrice is the base price before reduction and taxes
      */
-    protected $productBasePrice;
+    protected $BasePrice;
     /**
-     * @var $productFinalPrice is the last price with reductions and taxes included
+     * @var $FinalPrice is the last price with reductions and taxes included
      */
-    protected $productFinalPrice;
+    protected $FinalPrice;
     /**
      * @var $productQuantity indicates the number of products available
      */
@@ -72,33 +72,33 @@ class Product
     /**
      * @return is
      */
-    public function getProductBasePrice()
+    public function getBasePrice()
     {
-        return $this->productBasePrice;
+        return $this->BasePrice;
     }
 
     /**
-     * @param is $productBasePrice
+     * @param is $BasePrice
      */
-    public function setProductBasePrice($productBasePrice)
+    public function setBasePrice($BasePrice)
     {
-        $this->productBasePrice = $productBasePrice;
+        $this->BasePrice = $BasePrice;
     }
 
     /**
      * @return is
      */
-    public function getProductFinalPrice()
+    public function getFinalPrice()
     {
-        return $this->productFinalPrice;
+        return $this->FinalPrice;
     }
 
     /**
      * @param is $productFinalPrice
      */
-    public function setProductFinalPrice($productFinalPrice)
+    public function setFinalPrice($FinalPrice)
     {
-        $this->productFinalPrice = $productFinalPrice;
+        $this->FinalPrice = $FinalPrice;
     }
 
     /**

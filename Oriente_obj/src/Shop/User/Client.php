@@ -16,6 +16,7 @@ class Client extends AbstractUser
     *    protected $userAdress;
     *    protected $userEmail;
     *    protected $userOrders;
+     *
      ***************************************************/
 
 

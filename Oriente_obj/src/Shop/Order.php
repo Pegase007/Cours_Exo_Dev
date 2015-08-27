@@ -38,14 +38,14 @@ class Order
     protected $orderDate;
 
     /**
-     * @var $orderBasePrice is the original price
+     * @var $BasePrice is the original price
      */
-    protected $orderBasePrice;
+    protected $BasePrice;
 
     /**
-     * @var $orderFinalPrice is the price after adding taxes and reductions
+     * @var $FinalPrice is the price after adding taxes and reductions
      */
-    protected $orderFinalPrice;
+    protected $FinalPrice;
     /**
      * @var $orderProductQuantity is the total number of articles in the order
      */
@@ -71,8 +71,8 @@ class Order
         $this->orderProducts=array();
         $this->orderDeliveryDate= new \DateTime("+ 2 days");
         $this->orderDate = new \DateTime("now");
-        $this->orderBasePrice = 0;
-        $this->orderFinalPrice =0;
+        $this->BasePrice = 0;
+        $this->FinalPrice =0;
         $this->orderProductQuantity=0;
         $this->orderState=0;
         $this->orderPayment=false;
@@ -168,19 +168,19 @@ class Order
     /**
      * @return is
      */
-    public function getOrderBasePrice()
+    public function getBasePrice()
     {
-        return $this->orderBasePrice;
+        return $this->BasePrice;
     }
 
     /**
-     * @param is $orderBasePrice
+     * @param is $BasePrice
      */
-    public function setOrderBasePrice()
+    public function setBasePrice()
     {
         foreach($this->getOrderProducts() as $price){
 
-            $this->orderBasePrice= $this->orderBasePrice + $price->getProductBasePrice();
+            $this->BasePrice= $this->BasePrice + $price->getBasePrice();
         }
 
     }
@@ -188,19 +188,19 @@ class Order
     /**
      * @return is
      */
-    public function getOrderFinalPrice()
+    public function getFinalPrice()
     {
-        return $this->orderFinalPrice;
+        return $this->FinalPrice;
     }
 
     /**
      * @param is $finalPrice
      */
-    public function setOrderFinalPrice($finalPrice)
+    public function setFinalPrice()
     {
         foreach($this->getOrderProducts() as $price){
 
-            $this->orderFinalPrice= $this->orderFinalPrice + $price->getProductFinalPrice();
+            $this->FinalPrice= $this->FinalPrice + $price->getFinalPrice();
         }
     }
 

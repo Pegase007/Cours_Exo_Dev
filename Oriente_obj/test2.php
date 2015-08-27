@@ -91,13 +91,54 @@ var_dump($fruit);
 //
 
 
+echo "<h2> Design Patterns </h2>";
+
+$darty = new\App\Export\DartyFactory();
+$product= $darty->createProduct('Apple Watch','A22EF',14.00);
+dump($darty->createProduct('Apple Watch','A22EF',14.00));
+dump($product->vente());
+$boulanger = new\App\Export\BoulangerFactory();
+$product= $boulanger->createProduct('Apple Book','A2DFSD',140.00);
+dump($boulanger->createProduct('Apple Book','A2DFSD',140.00));
+dump($product->vente());
 
 
 
 
 
+$running = function(\App\Export\VenteInterface $obj){
+
+    return $obj ->vente();
+};
+
+$abstractrunningprod =function(\App\Export\AbstractFactory $class, $title,$reference,$prix){
+
+    return $class->createProduct($title,$reference,$prix);
+};
+
+$abstractrunningcat=function(\App\Export\AbstractFactory $class, $title,$description){
+
+    return $class->createCategory($title,$description);
+};
+
+$produit1=$abstractrunningprod($darty,'Appel Watch','A22EF',14.00);
+$produit2=$abstractrunningprod($boulanger,'Apple Book','A2DFSD',140.00);
+$cat = $abstractrunningcat($darty,'Watch','watches');
+$cat1 = $abstractrunningcat($boulanger,'Computer','pro');
+
+dump($produit1);
+dump($produit2);
+dump($cat);
+dump($cat1);
 
 
+echo "<h2> Builder </h2>";
+
+$manager = new \App\Commercials\Manager();
+
+$product5=$manager->build(new App\Commercials\ProductBuilder());
+
+dump($product5);
 
 
 ?>

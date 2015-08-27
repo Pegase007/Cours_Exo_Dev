@@ -28,8 +28,8 @@
     $product1=new Shop\Product();
     $product1->setProductName('Montre');
     $product1->setProductReference('123456');
-    $product1->setProductBasePrice(250);
-    $product1->setProductFinalPrice(250);
+    $product1->setBasePrice(250);
+    $product1->setFinalPrice(250);
     $product1->setProductQuantity(10);
     $product1->setProductState(1);
 
@@ -60,8 +60,8 @@
     $add->setOrderClient($user1);
     $add->addProduct($product1);
     $add->addProduct($product1);
-    $add->setOrderBasePrice();
-    $add->setOrderFinalPrice();
+    $add->setBasePrice();
+    $add->setFinalPrice();
     $add->setOrderProductQuantity();
     $add->setOrderState(1);
 
@@ -69,6 +69,17 @@
     dump($product1);
     dump($add);
 
+    /**
+     * Promotion
+     */
+
+    $promotion1=new Shop\Commercial\Promotions();
+    $promotion1-> setPromoCode(8);
+    $promotion1->getPromoCode();
+    $promotion1->ObjectOffer($product1,10 , "%");
+    dump( $promotion1->ObjectOffer($product1,10 , "%"));
+
+    dump($promotion1);
 
 
 

@@ -30,6 +30,11 @@ abstract class AbstractUser
      * @var array $userOrders should include all previous and actual orders from the client
      */
     protected $userOrders;
+    /**
+     * @var array $userAge
+     */
+    protected $userAge;
+
 
 
 
@@ -128,6 +133,22 @@ abstract class AbstractUser
     public function setUserOrders($userOrders)
     {
         $this->userOrders = $userOrders;
+    }
+
+    /**
+     * @return array
+     */
+    public function getUserAge()
+    {
+        return $this->userAge;
+    }
+
+    /**
+     * @param array $userAge
+     */
+    public function setUserAge($userAge)
+    {
+        $this->userAge = $userAge;
     }
 
 
