@@ -29,6 +29,7 @@
     $product1->setProductName('Montre');
     $product1->setProductReference('123456');
     $product1->setProductBasePrice(250);
+    $product1->setProductFinalPrice(250);
     $product1->setProductQuantity(10);
     $product1->setProductState(1);
 
@@ -60,9 +61,11 @@
     $add->addProduct($product1);
     $add->addProduct($product1);
     $add->setOrderBasePrice();
-//    $add->delProduct($product1);
+    $add->setOrderFinalPrice();
+    $add->setOrderProductQuantity();
+    $add->setOrderState(1);
 
-    dump($add->getOrderBasePrice());
+//    $add->delProduct($product1);
     dump($product1);
     dump($add);
 

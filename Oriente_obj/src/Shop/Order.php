@@ -198,7 +198,10 @@ class Order
      */
     public function setOrderFinalPrice($finalPrice)
     {
-        $this->orderFinalPrice = $finalPrice;
+        foreach($this->getOrderProducts() as $price){
+
+            $this->orderFinalPrice= $this->orderFinalPrice + $price->getProductFinalPrice();
+        }
     }
 
     /**
@@ -206,15 +209,15 @@ class Order
      */
     public function getOrderProductQuantity()
     {
-        return $this->orderProductQuantity;
+        return count($this->orderProducts);
     }
 
     /**
      * @param is $orderProductQuantity
      */
-    public function setOrderProductQuantity($orderProductQuantity)
+    public function setOrderProductQuantity()
     {
-        $this->orderProductQuantity = $orderProductQuantity;
+        $this->orderProductQuantity = count($this->orderProducts);
     }
 
     /**
