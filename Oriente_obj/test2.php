@@ -141,6 +141,56 @@ $product5=$manager->build(new App\Commercials\ProductBuilder());
 dump($product5);
 
 
+echo "<h2> Design Patterns Factory</h2>";
+
+
+$samsungfactory = new \App\Smartphone\SamsungFactory();
+$appelfactory = new App\Smartphone\AppleFactory();
+$sonyfactory=new App\Smartphone\SonyFactory();
+
+
+$smartphoneSamsung=$samsungfactory->createSmartphone("metal","vert",16,120);
+$smartphoneApple=$appelfactory->createSmartphone("plastique","noir",32,230);
+$smartphoneSony=$sonyfactory->createSmartphone("plastique","gris",32,210);
+
+
+dump($smartphoneSamsung);
+dump($smartphoneApple);
+dump($smartphoneSony);
+
+
+echo "<h2> Design Patterns Decorator</h2>";
+
+$prod1= new App\WebService\Product('Apple Watch','description',600);
+$prod2= new App\WebService\Product('Apple TV','description',2000);
+
+$mark1= new App\WebService\Marque('Apple','AEREZ');
+$mark2= new App\WebService\Marque('Samsung','RESRES');
+
+$cat1=new App\WebService\Category('Telephone','cat of telephones',1);
+$cat2=new App\WebService\Category('Ordinateurs','cat of ordinateurs',0);
+
+
+$renderjson= new \App\WebService\RenderInJson($prod1);
+$renderXml=new \App\WebService\RenderInXml($prod2);
+//$renderBoot=new App\WebService\RenderInBootstrap($prod1);
+//$renderBoot2=new App\WebService\RenderInBootstrap($cat1);
+
+
+
+$extras=new App\WebService\RenderInBootstrap( new App\WebService\RenderInBold($prod1));
+
+
+dump($renderjson->renderProduct(),$renderXml->renderProduct());
+
+dump( $extras->renderProduct());
+
+
+
+//echo $renderBoot->renderProduct();
+echo $extras->renderProduct();
+
+
 ?>
 </div>
 </body>

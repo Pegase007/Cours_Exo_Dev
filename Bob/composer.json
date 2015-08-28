@@ -8,6 +8,7 @@
         "symfony/var-dumper": "^2.7",
         "symfony/debug": "^2.7",
         "symfony/Finder": "^2.7",
-        "monolog/monolog": "^1.16"
+        "monolog/monolog": "^1.16",
+        "phpunit/phpunit": "^4.8"
     }
 }
