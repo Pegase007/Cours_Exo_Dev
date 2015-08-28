@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 28/08/15
- * Time: 16:27
- */
 
 namespace App\FaceDeBook;
 
@@ -16,12 +10,12 @@ class User implements UserInterface
 
     protected $email;
     protected $age;
-    protected $images;
+    protected $video;
 
 
-    public function addImage(Images $image){
+    public function addVideo(Video $video){
 
-        $this->images[]=$image;
+        $this->video[]=$video;
 
     }
     /**
@@ -59,9 +53,9 @@ class User implements UserInterface
     /**
      * @return mixed
      */
-    public function getImages()
+    public function getVideo()
     {
-        return $this->images;
+        return $this->video;
     }
 
 

@@ -1,16 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 28/08/15
- * Time: 15:43
- */
 
-namespace App\FaceDeBook;
+namespace App\Google;
 
 
-
-class FbUserAdapter implements UserInterface
+class GoogleUserAdapter implements UserInterface
 {
 
     protected $fbuser;
@@ -72,13 +65,13 @@ class FbUserAdapter implements UserInterface
      *car c'est important si je le traite apres il fau que ce soit la meme chose
      * @return array
      */
-    public function getImages(){
+    public function getMov(){
 
-        $images = $this->fbuser->getPhotos();
+        $videos= $this->fbuser->getVideo();
 
-        foreach($images as $image){
+        foreach($videos as $video){
 
-            $tab[]= new Images($image);
+            $tab[]= new Video($video);
         }
         return $tab;
     }

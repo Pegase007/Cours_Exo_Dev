@@ -190,6 +190,18 @@ dump( $extras->renderProduct());
 //echo $renderBoot->renderProduct();
 echo $extras->renderProduct();
 
+echo "<h2> Design Patterns Adapteur</h2>";
+
+$adapteur= new App\FaceDeBook\FbUserAdapter(new \App\FaceDeBook\FbUser());
+
+dump($adapteur->getImages());
+
+
+echo "<h4>Google </h4>";
+
+$google= new \App\Google\GoogleUserAdapter((new \App\Google\GoogleUser()));
+
+dump($google->getMov())
 
 ?>
 </div>
