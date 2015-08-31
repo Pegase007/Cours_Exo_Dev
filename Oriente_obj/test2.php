@@ -201,7 +201,36 @@ echo "<h4>Google </h4>";
 
 $google= new \App\Google\GoogleUserAdapter((new \App\Google\GoogleUser()));
 
-dump($google->getMov())
+dump($google->getMov());
+
+
+echo "<h2> Design Patterns composite</h2>";
+
+$product=new App\Commande\Product();
+$product->render($prod1);
+
+$product2= new App\Commande\Product();
+$product2->render($prod2);
+
+$ref=new App\Commande\Reference();
+$ref->render(5);
+
+
+dump($ref);
+
+$commande= new App\Commande\Commande();
+
+$commande ->addElement($ref);
+$commande->addElement($product);
+$commande->addElement($product2);
+
+
+dump($commande);
+$commande->render($commande);
+
+dump($commande->render($commande));
+
+
 
 ?>
 </div>
